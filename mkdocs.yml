@@ -1,0 +1,32 @@
+site_name: NFDI Jupyter Services
+site_description: A list of jupyter services within the German research data infrastructure
+site_author: WG RSE, NFDI Section 'Common Infrastructures'
+site_url: "https://NFDI-Jupyter.github.io/services"
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: light blue
+    accent: lime
+  font: false
+  logo: assets/nfdi_rgb_Wortmarke_Zusatz_hoch.png
+  favicon: assets/nfdi_rgb_Wortmarke.png
+  language: en
+  #custom_dir: custom/
+
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - js/tablesort.js
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - meta
+  - tables
