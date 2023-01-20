@@ -7,7 +7,7 @@ documentation_url:
 target_group_open_for: Researchers of NFDI4Ing
 login_process: Login via Shibboleth (DFN-AAI & eduGAIN federation)
 features:
-  version: Lab
+  version: JupyterHub 1.x (lab view)
   kernels: ["Python", "Matlab", "Julia", "R"]
   extensions: []
   proxy_apps: ["Matlab IDE"]
