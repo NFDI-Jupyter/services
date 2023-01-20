@@ -1,0 +1,32 @@
+title: 
+provider: 
+service_url: 
+support: 
+health_api_url: 
+documentation_url: 
+target_group_open_for: 
+login_process: 
+features:
+  version: 
+  kernels: []
+  extensions: []
+  proxy_apps: []
+  install: 
+  shared_folder:
+  persistent_storage:
+  misc: []
+resources:
+  default_server_user: 
+  max_server_user: 
+  default_cpu: 
+  max_cpu: 
+  default_cpu_time:
+  max_cpu_time:
+  default_memory:
+  max_memory:
+  default_gpu:
+  max_gpu:
+  default_disk:
+  max_disk:
+  default_persistent_disk:
+  max_persistent_disk:

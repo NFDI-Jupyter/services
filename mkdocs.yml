@@ -1,6 +1,6 @@
 site_name: NFDI Jupyter Services
-site_description: A list of jupyter services within the German research data infrastructure
-site_author: WG RSE, NFDI Section 'Common Infrastructures'
+site_description: A list of jupyter services within the national research data infrastructure of Germany
+site_author: WG RSE, NFDI Section Common Infrastructures
 site_url: "https://NFDI-Jupyter.github.io/services"
 
 theme:
@@ -8,7 +8,7 @@ theme:
   palette:
     scheme: default
     primary: light blue
-    accent: lime
+    accent: deep purple
   font: false
   logo: assets/nfdi_rgb_Wortmarke_Zusatz_hoch.png
   favicon: assets/nfdi_rgb_Wortmarke.png
@@ -26,7 +26,19 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - attr_list
   - md_in_html
   - meta
   - tables
+  - def_list
+
+plugins:
+  - search
+  - gen-files:
+      scripts:
+        - docs/gen_detail_pages.py
+  - macros:
+      include_dir: include

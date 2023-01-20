@@ -1,0 +1,35 @@
+---
+title: NFDI4Ing JupyterHub
+provider: University of Stuttgart
+service_url: https://jupyter.nfdi4ing.de
+support: fokus@izus.uni-stuttgart.de
+health_api_url: 
+documentation_url: 
+target_group_open_for: Researchers of NFDI4Ing
+login_process: Login via Shibboleth (DFN-AAI & eduGAIN federation)
+features:
+  version: Lab
+  kernels: ["Python", "Matlab", "Julia", "R"]
+  extensions: []
+  proxy_apps: ["Matlab IDE"]
+  install: true
+  shared_folder: false
+  persistent_storage: true
+  misc: ["WebDAV connection possible"]
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  default_cpu: 1
+  max_cpu: 4
+  default_cpu_time: 1 h
+  max_cpu_time: 72 h
+  default_memory: 100 MB
+  max_memory: 4 GB
+  default_gpu: 0
+  max_gpu: 0
+  default_disk: 10 GB
+  max_disk: 10 GB
+  default_persistent_disk: 2 GB
+  max_persistent_disk: 2 GB
+---
+{% include 'details.md' %}
