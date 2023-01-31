@@ -1,0 +1,69 @@
+title: University of Münster JupyterHub
+provider: University of Münster
+service_url: https://jupyterhub.uni-muenster.de
+support:
+health_api_url: https://jupyterhub.uni-muenster.de/hub/api/health
+documentation_url: 
+target_group_open_for: Students and employees of University of Münster, members of PUNCH4NFDI (soon)
+login_process: Login via Shibboleth (DFN-AAI & eduGAIN federation)
+features:
+  version: JupyterHub 3.0, JupyterLab 3.6
+  kernels: ["Python", "Octave", "Julia", "R", "SageMath", "gnuplot", "Mathematica", "C++", "Rust", "Go", "Scheme"]
+  extensions: ["jupyterlab_pygments",
+    "ipyparallel-labextension",
+    "jupyter-matplotlib",
+    "jupyter-threejs",
+    "jupyterlab-datawidgets",
+    "bqplot",
+    "ipysheet",
+    "ipyvolume",
+    "jupyter-leaflet",
+    "jupyter-vue",
+    "jupyter-vuetify",
+    "jupyter-webrtc",
+    "jupyterlab-drawio",
+    "jupyterlab-plotly",
+    "nglview-js-widgets",
+    "jupyterlab-jupytext",
+    "jupyterlab-logout",
+    "jupyterlab-system-monitor",
+    "jupyterlab-topbar-extension",
+    "jupyterlab_iframe",
+    "nbdime-jupyterlab",
+    "@jupyter-widgets/jupyterlab-manager",
+    "@jupyter-widgets/jupyterlab-sidecar",
+    "@jupyterlab/git",
+    "@jupyterlab/server-proxy",
+    "@jupyterlab/latex",
+    "@jupyterlab/mathjax3-extension",
+    "@bokeh/jupyter_bokeh",
+    "@agoose77/jupyterlab-markup",
+    "@jupyter-server/resource-usage",
+    "@lckr/jupyterlab_variableinspector",
+    "@ryantam626/jupyterlab_code_formatter",
+    "jupyterlab-controlpanel",
+    "jupyterlab-helplinks",
+    "jupyterlab-theme-toggle"]
+  proxy_apps: ["Matlab IDE", "RStudio", "VS Code", "Shiny",
+    # GUI apps via noVNC:
+    "Avogadro", "Blender", "Grace", "Mathematica", "MaxQuant", "OMERO", "ParaView", "Spyder", "TeXstudio", "VMD", "VoreenVE"]
+  install: true
+  shared_folder: false
+  persistent_storage: true
+  misc: ["Available resources and apps may vary based on user affiliation", "Sciebo cloud storage integration (beta)", "GUI apps via noVNC in browser window", "Hosted on Kubernetes cluster"]
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  # cpu values refer to vCPUs and are guarantees in case of contention, limits are 8x higher
+  default_cpu: 0.25
+  max_cpu: 2
+  default_cpu_time: 6 h
+  max_cpu_time: 6 h
+  default_memory: 1 GB
+  max_memory: 16 GB
+  default_gpu: 0
+  max_gpu: 1
+  default_disk: 5 GB
+  max_disk: 5 GB
+  default_persistent_disk: 5 GB
+  max_persistent_disk: 5 GB
