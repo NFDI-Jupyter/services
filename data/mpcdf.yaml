@@ -1,0 +1,32 @@
+title: MPCDF JupyterHub
+provider: Max Planck Computing and Data Facility
+service_url: https://notebooks.mpcdf.mpg.de
+support: support@mpcdf.mpg.de
+health_api_url: 
+documentation_url: 
+target_group_open_for: Researchers of the Max Planck Society
+login_process:
+features:
+  version: JupyterHub 1.x (lab view)
+  kernels: ["Python", "Julia", "R"]
+  extensions: []
+  proxy_apps: []
+  install: true
+  shared_folder: false
+  persistent_storage: false
+  misc: []
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  default_cpu: 1
+  max_cpu: 4
+  default_cpu_time: 1 h
+  max_cpu_time: 72 h
+  default_memory: 100 MB
+  max_memory: 4 GB
+  default_gpu: 0
+  max_gpu: 0
+  default_disk: 10 GB
+  max_disk: 10 GB
+  default_persistent_disk: 0 GB
+  max_persistent_disk: 0 GB
