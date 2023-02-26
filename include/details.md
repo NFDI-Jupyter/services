@@ -28,7 +28,7 @@ __Documentation__
 
 === "General"
 
-    - Version: {{ features.version }}
+    - Version(s): {{ features.version }}
     {% if features.install %}
     - Temporarly install new packages by the user
     {% endif %}
