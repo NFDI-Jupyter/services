@@ -1,0 +1,32 @@
+title: PC² JupyterHub
+provider: Paderborn Center for Parallel Computing, University of Paderborn
+service_url: https://jh.pc2.uni-paderborn.de
+support: pc2-support@uni-paderborn.de
+health_api_url: https://jh.pc2.uni-paderborn.de.de/hub/api/health
+documentation_url: https://pc2.uni-paderborn.de/go/jh
+target_group_open_for: All users of a computing time project at PC²
+login_process: Login via LDAP
+features:
+  version: JupyterHub 3.1.0, JupyterLab 3.6
+  kernels: ["Python", "Julia", "R"]
+  extensions: ["jupyterlab-nvdashboard", "jupyterlab-lmod", "jupyterlab-desktop", "jupyterlab-plotly", "jupyterlab-pygments"]
+  proxy_apps: ["Remote Desktop (noVNC)", "Full offered software on clusters with graphical interface (https://pc2.uni-paderborn.de/go/software)"]
+  install: yes
+  shared_folder: true
+  persistent_storage: true
+  misc: ["Singularity integration (default + custom container)", "Pre-Set Environments", "Course functionality", "Remote Desktop with Slurm tools and module", "Remote Slurm kernel to start only kernels remote on cluster", "Direct connection of the cluster parallel filesystem", "User home directory for e.g. user-specific packages"]
+resources:
+  default_server_user: 1
+  max_server_user: 10
+  default_cpu:
+  max_cpu: 143872
+  default_cpu_time:
+  max_cpu_time: 21 d
+  default_memory:
+  max_memory: 347 TB
+  default_gpu:
+  max_gpu: 128
+  default_disk:
+  max_disk: 6 PB temporary scratch data (requested on application)
+  default_persistent_disk:
+  max_persistent_disk: 185 TB permanent data (requested on application)
