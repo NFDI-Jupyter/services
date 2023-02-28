@@ -1,0 +1,38 @@
+title: European Galaxy Server
+provider: European Galaxy Project, NFDI4Plants, NFDI4BioImaging, EOSC
+service_url: https://live.usegalaxy.eu
+support: contact@usegalaxy.eu  
+health_api_url: https://status.galaxyproject.org
+documentation_url: https://training.galaxyproject.org
+target_group_open_for: Open for everyone
+login_process: Login via OpenOIDC (LS-AAI, DataPLANT)
+features:
+  version: Galaxy 23.0
+  kernels: ["Python", "Julia", "R", "Ansible", "R"]
+  extensions: []
+  proxy_apps: [Jupyter, Jupyter ML, RStudio, MGnify, AskOMICS, 
+    BAM-IOBICF-IOBIO, CellXGene, Ethercalc, Phinch, MetaShARK, Wallace,
+    iSEE, Wilson, Jupyter for Material Science, Pangeo Jupyter, Climate Jupyter, Panoply netCDF Viewer, HiGlass
+    Pavian, OpenRefine, Neo4J, GeoExplorer, NEAL]
+  install: true
+  shared_folder: true
+  persistent_storage: true
+  misc: ["Cloud storage can be accessed via Galaxy",
+  "GUI apps via noVNC in browser window",
+  "Part of the EOSC project EuroScienceGateway",
+  "Available resources and apps can vary based on user affiliation"]
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  default_cpu: 1
+  max_cpu: 4
+  default_cpu_time: 24 h
+  max_cpu_time: 72 h
+  default_memory: 4 GB
+  max_memory: 256 GB
+  default_gpu: 1
+  max_gpu: 1
+  default_disk: 250 GB
+  max_disk: 2 TB
+  default_persistent_disk: 250 GB
+  max_persistent_disk: 250 GB
