@@ -1,0 +1,32 @@
+title: Jupyter-JSC
+provider: Juelich Supercomputing Centre
+service_url: https://jupyter-jsc.fz-juelich.de
+support: ds-support@fz-juelich.de
+health_api_url: 
+documentation_url: https://docs.jupyter-jsc.fz-juelich.de
+target_group_open_for: HPC users of JSC. Helmholtz users in general
+login_process: Login via JSC account or Helmholtz AAI
+features:
+  version: JupyterHub 2.3.1 JupyterLab 2.6,3.2,3.3,3.4
+  kernels: ["Bash", "Cling", "JavaScript", "Julia", "Octave", "R", "Ruby", "PyDeepLearning", "PyQuantum", "PyVisualization", "Custom"]
+  extensions: ["Bokeh", "JupyterLab Preview", "JupyterLab Manager", "JupyterLab Sidecar", "JupyterLab Git", "JupyterLab server proxy", "JupyterLab toc", "JupyterLab lsp", "JupyterLab quickopen", "JupyterLab pyviz", "JupyterLab Code Formatter", "BQPlot", "Dask Labextension", "IPyVolume", "ITKWidgets", "Leaflet", "Matplotlib", "ThreeJS", "Vue", "Vuetify", "JuypterLab Control", "JupyterLab Dash", "JupyterLab Datawidgets", "JupyterLab GitLab", "JupyterLab Lmod", "JupyterLab plotly", "JupyterLab System Monitor", "JupyterLAb Theme Toggle", "JupyterLab topbar extension", "JupyterLab iframe", "nbdime", "plotlywidget", "pvlink", "Jupyter Slurm Provisioner", "NVDashboard"]
+  proxy_apps: ["XPra"]
+  install: true
+  shared_folder: false
+  persistent_storage: true
+  misc: ["Start on multiple (external) systems possible (including hpc). Resources depend highly on system", "2FA authentication available", "WebDAV connection possible", "SSL encryption between JupyterLab and JupyterHub"]
+resources:
+  default_server_user: 1
+  max_server_user: 100
+  default_cpu: 2
+  max_cpu: 1024
+  default_cpu_time: 30 min
+  max_cpu_time: 24 h
+  default_memory: 96 GB
+  max_memory: 768 GB
+  default_gpu: 0
+  max_gpu: 4
+  default_disk: 10 GB
+  max_disk:
+  default_persistent_disk: 
+  max_persistent_disk: 
