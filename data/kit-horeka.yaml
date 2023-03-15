@@ -1,0 +1,32 @@
+title: HoreKa Jupyterhub
+provider: Karlsruhe Institute of Technology
+service_url: https://hk-jupyter.scc.kit.edu
+support: https://support.nhr.kit.edu
+health_api_url: 
+documentation_url: https://www.nhr.kit.edu/userdocs/jupyter
+target_group_open_for: Researchers, Users upon project application, Helmholtz users
+login_process: Login through Home Organizations, Helmholtz AAI
+features:
+  version: Jupyterhub 3.1.1, Jupyterlab 3.4.8
+  kernels: [Python, Julia, R]
+  extensions: ["jupyterlab-lmod","dask-labextension", "jupyterlab-git", "jupyterlab-latex", "jupytext"]
+  proxy_apps: ["jupyter-codeserver-proxy", "jupyter-desktop-server"]
+  install: true
+  shared_folder:
+  persistent_storage: true
+  misc: ["Available resources and apps may vary based on Cluster", "BEEGFS Filesystem can be mounted", "LSDF can be mounted", "User can install own python kernels", "Container integration via pyxis"]
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  default_cpu: 72
+  max_cpu: 72
+  default_cpu_time:
+  max_cpu_time:
+  default_memory: 237 GB
+  max_memory: 488 GB
+  default_gpu: 0
+  max_gpu: 4
+  default_disk: 
+  max_disk: 
+  default_persistent_disk: 10 TB home
+  max_persistent_disk: 250 TB workspace
