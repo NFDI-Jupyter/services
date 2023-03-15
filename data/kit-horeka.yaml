@@ -12,7 +12,7 @@ features:
   extensions: ["jupyterlab-lmod","dask-labextension", "jupyterlab-git", "jupyterlab-latex", "jupytext"]
   proxy_apps: ["jupyter-codeserver-proxy", "jupyter-desktop-server"]
   install: true
-  shared_folder:
+  shared_folder: true
   persistent_storage: true
   misc: ["Available resources and apps may vary based on Cluster", "BEEGFS Filesystem can be mounted", "LSDF can be mounted", "User can install own python kernels", "Container integration via pyxis"]
 resources:
@@ -27,6 +27,6 @@ resources:
   default_gpu: 0
   max_gpu: 4
   default_disk: 
-  max_disk: 
-  default_persistent_disk: 10 TB home
-  max_persistent_disk: 250 TB workspace
+  max_disk: 800 GB
+  default_persistent_disk: 10 TB
+  max_persistent_disk: 250 TB
