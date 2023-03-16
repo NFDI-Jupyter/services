@@ -1,5 +1,5 @@
-title: RWTH Aachen University
-provider: HPC.ITC.RWTH
+title: RWTH HPC JupyterHub
+provider: ITC RWTH Aachen University
 service_url: https://jupyterhub.hpc.itc.rwth-aachen.de:9651/
 support: servicedesk@itc.rwth-aachen.de
 health_api_url: https://jupyterhub.hpc.itc.rwth-aachen.de:9651/hub/api/health
@@ -23,7 +23,7 @@ features:
   install: false
   shared_folder: true
   persistent_storage: true
-  misc: ["Available core-hours vary based on user affiliation or project.", "Runs on HPC Hardware", "Users installs planned, by request only at the moment."]
+  misc: ["Available computing time (core-hours) vary based on user affiliation or project. Project application is necesary.", "Runs on HPC Hardware under Slurm.", "Users installs planned, by request only at the moment."]
 resources:
   default_server_user: 1
   max_server_user: 5
@@ -36,7 +36,7 @@ resources:
   max_memory: 185 GB
   default_gpu: 0
   max_gpu: 2
-  default_disk: 150 GB /home + 250 GB /work  
-  max_disk: 1 TB /hpcwork  
-  default_persistent_disk: 150 GB /home + 250 GB /work   
-  max_persistent_disk: 1 TB /hpcwork 
+  default_disk: 400 GB
+  max_disk: 1 TB  
+  default_persistent_disk: 400 GB
+  max_persistent_disk: 1 TB
