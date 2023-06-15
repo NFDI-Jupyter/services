@@ -175,3 +175,9 @@
   margin-block-start: 0px;
   margin-block-end: 0px;
 }
+
+.nfdi-card-link {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}

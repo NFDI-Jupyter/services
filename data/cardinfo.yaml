@@ -1,0 +1,81 @@
+- title: NFDI4Ing JupyterHub
+  content: |
+    Provider: *University of Stuttgart*
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/nfdi4ing/)
+
+    [:material-lock: Login](https://jupyter.nfdi4ing.de){.md-button .md-button--primary}</div>
+  image: assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: MPCDF JupyterHub
+  content: |
+    Provider: *Max Planck Computing and Data Facility*
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/mpcdf/)
+
+    [:material-lock: Login](https://notebooks.mpcdf.mpg.de){.md-button .md-button--primary}</div>
+  image: assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: University of Münster JupyterHub
+  content: |
+    Provider: *University of Münster*
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/uni-muenster/)
+
+    [:material-lock: Login](https://jupyterhub.uni-muenster.de){.md-button .md-button--primary}</div>
+  image: assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: RWTH HPC JupyterHub
+  content: |
+    Provider: *ITC RWTH Aachen University*
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/RWTH-NFDI-Jupyter-Service/)
+
+    [:material-lock: Login](https://jupyterhub.hpc.itc.rwth-aachen.de:9651/){.md-button .md-button--primary}</div>
+  image: assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: Jupyter-Cloud
+  content: |
+    Provider: *GWDG*
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/gwdg/)
+
+    [:material-lock: Login](https://jupyter-cloud.gwdg.de){.md-button .md-button--primary}</div>
+  image: assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: SCC Jupyterhub
+  content: |
+    Provider: *GWDG*
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/gwdg_hpc/)
+
+    [:material-lock: Login](https://jupyter-hpc.gwdg.de){.md-button .md-button--primary}</div>
+  image: assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: Jupyter-JSC
+  content: |
+    Provider: *Juelich Supercomputing Centre*
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/jupyter-jsc.fz-juelich.de/)
+
+    [:material-lock: Login](https://jupyter-jsc.fz-juelich.de){.md-button .md-button--primary}</div>
+  image: assets/jupyter-jsc.fz-juelich.de.png
+  icon: ":octicons-arrow-right-24:"
+- title: HoreKa Jupyterhub
+  content: |
+    Provider: *Karlsruhe Institute of Technology*
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/kit-horeka/)
+
+    [:material-lock: Login](https://hk-jupyter.scc.kit.edu){.md-button .md-button--primary}</div>
+  image: assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: PC² JupyterHub
+  content: |
+    Provider: *Paderborn Center for Parallel Computing, University of Paderborn*
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/pc2-upb/)
+
+    [:material-lock: Login](https://jh.pc2.uni-paderborn.de){.md-button .md-button--primary}</div>
+  image: assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"

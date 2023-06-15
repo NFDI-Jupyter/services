@@ -13,9 +13,12 @@ theme:
   logo: assets/nfdi_rgb_Wortmarke_Zusatz_hoch.png
   favicon: assets/nfdi_rgb_Wortmarke.png
   language: en
-  #custom_dir: custom/
+  #features:
+  #  - navigation.tabs
+  custom_dir: custom/
 
 extra_css:
+  - css/neoteroi-cards.css
   - css/extra.css
 
 extra_javascript:
@@ -34,6 +37,7 @@ markdown_extensions:
   - meta
   - tables
   - def_list
+  - neoteroi.cards
 
 plugins:
   - search
@@ -42,3 +46,6 @@ plugins:
         - docs/gen_detail_pages.py
   - macros:
       include_dir: include
+  - mkdocs-simple-hooks:
+      hooks:
+        on_pre_build: "data.hooks:generate_cards"
