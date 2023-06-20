@@ -1,0 +1,32 @@
+title: GESIS Notebooks
+provider: GESIS – Leibniz Institute for the Social Sciences
+service_url: http://notebooks.gesis.org
+support: notebooks@gesis.org
+health_api_url: http://notebooks.gesis.org/binder/health
+documentation_url: https://github.com/gesiscss/orc
+target_group_open_for: Open, wich a focus on Computational Social Science
+login_process: Open
+features:
+  version: JupyterHub 3.0.0-beta.1, BinderHub
+  kernels: ["configurable by the user"]
+  extensions: ["configurable by the user"]
+  proxy_apps: []
+  install: true
+  shared_folder: false
+  persistent_storage: false
+  misc: ["Part of the BinderHub Federation"]
+resources:
+  default_server_user: 1
+  max_server_user: 250
+  default_cpu: 1
+  max_cpu: 1
+  default_cpu_time: 20 min
+  max_cpu_time: 6 h
+  default_memory: 2 GB
+  max_memory: 4 GB
+  default_gpu: 0
+  max_gpu: 0
+  default_disk: 
+  max_disk:
+  default_persistent_disk: 
+  max_persistent_disk: 
