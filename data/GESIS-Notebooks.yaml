@@ -6,6 +6,7 @@ health_api_url: http://notebooks.gesis.org/binder/health
 documentation_url: https://the-turing-way.netlify.app/communication/binder/zero-to-binder.html
 target_group_open_for: Open, with a focus on Computational Social Science
 login_process: Open
+deployment_url: https://github.com/gesiscss/orc2
 features:
   version: JupyterHub 3.0.0-beta.1, BinderHub
   kernels: ["configurable by the user"]
@@ -24,9 +25,11 @@ resources:
   max_cpu_time: 6 h
   default_memory: 2 GB
   max_memory: 4 GB
+  default_instance_cpu: 1 Core
+  max_instance_cpu: 1 Core
   default_gpu: 0
   max_gpu: 0
-  default_disk: 
-  max_disk:
+  default_disk: 10 GB
+  max_disk: 10 GB
   default_persistent_disk: 0
   max_persistent_disk: 0
