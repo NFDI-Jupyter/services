@@ -3,8 +3,8 @@ provider: GESIS – Leibniz Institute for the Social Sciences
 service_url: http://notebooks.gesis.org
 support: notebooks@gesis.org
 health_api_url: http://notebooks.gesis.org/binder/health
-documentation_url: https://github.com/gesiscss/orc
-target_group_open_for: Open, wich a focus on Computational Social Science
+documentation_url: https://the-turing-way.netlify.app/communication/binder/zero-to-binder.html
+target_group_open_for: Open, with a focus on Computational Social Science
 login_process: Open
 features:
   version: JupyterHub 3.0.0-beta.1, BinderHub
@@ -28,5 +28,5 @@ resources:
   max_gpu: 0
   default_disk: 
   max_disk:
-  default_persistent_disk: 
-  max_persistent_disk: 
+  default_persistent_disk: 0
+  max_persistent_disk: 0
