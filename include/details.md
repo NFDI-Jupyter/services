@@ -1,5 +1,5 @@
 # {{ title }}
-The {{ title }} is provided by {{ provider }} and can be reached [here]({{ service_url }}).
+The {{ title }} can be reached [here]({{ service_url }}) and is provided by {{ provider }}.
 
 ## Short Facts
 __Service URL__

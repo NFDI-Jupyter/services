@@ -25,8 +25,6 @@ resources:
   max_cpu_time: 6 h
   default_memory: 2 GB
   max_memory: 4 GB
-  default_instance_cpu: 1 Core
-  max_instance_cpu: 1 Core
   default_gpu: 0
   max_gpu: 0
   default_disk: 10 GB
