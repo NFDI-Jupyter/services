@@ -1,5 +1,5 @@
 title: European Galaxy Server
-provider: European Galaxy Project, NFDI4Plants, NFDI4BioImaging, EOSC
+provider: University of Freiburg
 service_url: https://live.usegalaxy.eu
 support: contact@usegalaxy.eu  
 health_api_url: https://status.galaxyproject.org
@@ -8,19 +8,19 @@ target_group_open_for: Open for everyone
 login_process: Login via OpenIDC (LS-AAI, DataPLANT)
 features:
   version: Galaxy 23.0
-  kernels: ["Python", "Julia", "R", "Ansible"]
-  extensions: []
-  proxy_apps: [Jupyter, Jupyter ML, RStudio, MGnify, AskOMICS, 
-    BAM-IOBICF-IOBIO, CellXGene, Ethercalc, Phinch, MetaShARK, Wallace,
-    iSEE, Wilson, Jupyter for Material Science, Pangeo Jupyter, Climate Jupyter, Panoply netCDF Viewer, HiGlass
+  kernels: ["Python", "Julia", "R", "Ansible", "bash"]
+  extensions: [jupyter-matplotlib, jupyterlab-jupytext, jupyterlab-manager, fasta-extension, geojson-extension, katex-extension, jupyterlab_hdf]
+  proxy_apps: [RStudio, AskOMICS, 
+    BAM-iobio, VCF-iobio, BlobToolKit,  CellXGene, Ethercalc, Phinch, MetaShARK, MetaShrimp, ODV, Wallace,
+    iSEE, Wilson, Panoply netCDF Viewer, HiGlass, ParaView, QGIS, QuPath, Radiant, Scoop3-Agro, VRM Editor, 
     Pavian, OpenRefine, Neo4J, GeoExplorer, NEAL]
   install: true
   shared_folder: true
   persistent_storage: true
   misc: ["Cloud storage can be accessed via Galaxy",
-  "GUI apps are possible inside the browser",
   "Notebooks can be combined with classical HPC workflows",
   "Part of the EOSC project EuroScienceGateway",
+  "Community can contribute VREs",
   "Available resources and apps can vary based on user affiliation"]
 resources:
   default_server_user: 1
