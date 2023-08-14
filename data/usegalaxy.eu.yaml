@@ -1,4 +1,4 @@
-title: European Galaxy Server
+title: Interactive Tools of European Galaxy Server
 provider: University of Freiburg
 service_url: https://live.usegalaxy.eu
 support: contact@usegalaxy.eu  
@@ -7,9 +7,9 @@ documentation_url: https://training.galaxyproject.org
 target_group_open_for: Open for everyone
 login_process: Login via OpenIDC (LS-AAI, DataPLANT)
 features:
-  version: Galaxy 23.0
+  version: Galaxy 23.0 (Jupyterlab v3+)
   kernels: ["Python", "Julia", "R", "Ansible", "bash"]
-  extensions: [jupyter-matplotlib, jupyterlab-jupytext, jupyterlab-manager, fasta-extension, geojson-extension, katex-extension, jupyterlab_hdf]
+  extensions: [bqplot, jupyter-matplotlib, jupyterlab-jupytext, jupyterlab-manager, fasta-extension, geojson-extension, katex-extension, jupyterlab_hdf, jupyterlab-execute-time, jupyterlab-kernelspy, jupyterlab-nvdashboard, jupyterlab-system-monitor, jupyterlab-topbar-extension, jupyterlab_pygments, nbdime-jupyterlab, collapsible_headings, code-snippet-extension, code-viewer-extension, metadata-extension, pipeline-editor-extension, python-editor-extension, r-editor-extension, scala-editor-extension, script-debugger-extension, theme-extension, jupyterlab-lsp, resource-usage, jupyter-server-proxy, git, jupyterlab-preview]
   proxy_apps: [RStudio, AskOMICS, 
     BAM-iobio, VCF-iobio, BlobToolKit,  CellXGene, Ethercalc, Phinch, MetaShARK, MetaShrimp, ODV, Wallace,
     iSEE, Wilson, Panoply netCDF Viewer, HiGlass, ParaView, QGIS, QuPath, Radiant, Scoop3-Agro, VRM Editor, 
