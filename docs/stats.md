@@ -10,11 +10,31 @@ Currently, **11** providers host **12** Jupyter services:
 
 The following NFDI consortia contribute to one or more of the collected services:
 
-::cards::
+<style>
+    .smaller .nt-card .nt-card-image img {
+        height: 70px;
+    }
 
-- title: NFDI4Ing
-- title: NFDI4Plants
-- title: NFDI4BioImaging
+    .smaller .nt-card .nt-card-image {
+        min-height: 60px;
+    }
+</style>
+
+::cards:: cols=2
+
+- title: " "
+  image: assets/nfdi4ds_logo.png
+- title: " "
+  image: assets/DataPLANT_logo.svg
+  
+::/cards::
+
+::cards:: cols=2 class_name="smaller"
+  
+- title: " "
+  image: assets/nfdi4bioimage_logo.png
+- title: " "
+  image: assets/nfdi4ing_logo.png
 
 ::/cards::
 
