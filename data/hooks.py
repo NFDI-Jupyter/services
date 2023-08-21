@@ -27,7 +27,7 @@ def generate_cards(*args, **kwargs):
                 outfile.write("- title: %s\n"%d["title"])
                 outfile.write("""  content: |
     Provider: *%s*\n
-    <div class=\"nfdi-card-link\">[:octicons-arrow-right-24: Service Details](details/%s/)\n
+    <div class=\"nfdi-card-link\">[:octicons-arrow-right-24: Service Details](details/%s.md)\n
     [:material-lock: Login](%s){.md-button .md-button--primary}</div>\n"""%(d["provider"],service_name, d["service_url"]))
                 outfile.write("  image: assets/%s\n" % logo)
                 outfile.write("  icon: \":octicons-arrow-right-24:\"\n")
