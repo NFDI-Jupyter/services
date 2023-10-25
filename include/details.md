@@ -44,8 +44,6 @@ __Documentation__
 
 {% if (features.programming_languages or features.environments) %}
 === "Kernels"
-
-    {% for kernel in features.kernels %}
     {% if features.programming_languages %}
     Programming Languages:
     {% for kernel in features.programming_languages %}
@@ -57,19 +55,17 @@ __Documentation__
     {% for kernel in features.environments %}
     - {{ kernel }}
     {% endfor %}
+    {% endif %}
 {% endif %}
 
 {% if features.extensions %}
 === "Extensions"
-
     {% for extension in features.extensions %}
     - {{ extension }}
     {% endfor %}
 {% endif %}
 
 {% if features.proxy_apps %}
-=== "Webproxy Applications"
-
 === "Web-proxy Applications"
     {% for app in features.proxy_apps %}
     - {{ app }}
@@ -92,21 +88,21 @@ __Documentation__
 {% if technicals %}
 ## Technicals
 Some technical insights about {{ title }}:
-{% if technicals.platform %}
+  {% if technicals.platform %}
 - Platform: {{ technicals.platform }}
-{% endif %}
-{% if technicals.deployment %}
+  {% endif %}
+  {% if technicals.deployment %}
 - Deployment: {{ technicals.deployment }} {% if technicals.deployment_url %} [Further information]({{ technicals.deployment_url }}) {% endif %}
-{% endif %}
-{% if technicals.login_attributes %}
+  {% endif %}
+  {% if technicals.login_attributes %}
 - Required attributes, entitlements or memberships for Login: {{ technicals.login_attributes }}
-{% endif %}
-{% if technicals.hardware_location %}
+  {% endif %}
+  {% if technicals.hardware_location %}
 - Hardware location: {{ technicals.hardware_location }}
-{% endif %}
-{% if technicals.misc %}
-{% for feature in technicals.misc %}
+  {% endif %}
+  {% if technicals.misc %}
+  {% for feature in technicals.misc %}
 - {{ feature }}
-{% endfor %}
-{% endif %}
+  {% endfor %}
+  {% endif %}
 {% endif %}
