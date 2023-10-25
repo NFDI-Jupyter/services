@@ -5,10 +5,12 @@ support: support@mpcdf.mpg.de
 health_api_url: 
 documentation_url: 
 target_group_open_for: Researchers of the Max Planck Society
+restricted: true
 login_process:
 features:
   version: JupyterHub 1.x (lab view)
-  kernels: ["Python", "Julia", "R"]
+  programming_languages: ["Python", "Julia", "R"]
+  environments: []
   extensions: []
   proxy_apps: []
   install: true

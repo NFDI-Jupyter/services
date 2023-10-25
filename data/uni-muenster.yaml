@@ -5,10 +5,13 @@ support:
 health_api_url: https://jupyterhub.uni-muenster.de/hub/api/health
 documentation_url: 
 target_group_open_for: Students and employees of University of Münster, members of PUNCH4NFDI (soon)
+restricted: true
 login_process: Login via Shibboleth (DFN-AAI & eduGAIN federation)
 features:
   version: JupyterHub 3.0, JupyterLab 3.6
-  kernels: ["Python", "Octave", "Julia", "R", "SageMath", "gnuplot", "Mathematica", "C++", "Rust", "Go", "Scheme"]
+  programming_languages: ["Python", "Octave", "Julia", "R", "SageMath", "gnuplot", "Mathematica", "C++", "Rust", "Go", "Scheme"]
+  environments: []
+  environments_info: ""
   extensions: ["jupyterlab_pygments",
     "ipyparallel-labextension",
     "jupyter-matplotlib",
@@ -50,7 +53,12 @@ features:
   install: true
   shared_folder: false
   persistent_storage: true
-  misc: ["Available resources and apps may vary based on user affiliation", "Sciebo cloud storage integration (beta)", "GUI apps via noVNC in browser window", "Hosted on Kubernetes cluster"]
+  misc: ["Available resources and apps may vary based on user affiliation",
+         "Sciebo cloud storage integration (beta)",
+         "GUI apps via noVNC in browser window"]
+technicals:
+  deployment: Kubernetes
+  misc: []
 resources:
   default_server_user: 1
   max_server_user: 1

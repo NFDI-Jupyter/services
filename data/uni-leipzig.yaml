@@ -1,14 +1,18 @@
 title: Webbasiertes Data Science und Machine Learning mit Jupyter
 provider: University of Leipzig
 service_url: https://lab.sc.uni-leipzig.de
+service_url_requirement: VPN or on-site at Leipzig University
 support: sc-request@uni-leipzig.de
 health_api_url: 
 documentation_url: https://www.sc.uni-leipzig.de, https://www.urz.uni-leipzig.de/unsere-services/servicedetail/service/webbasiertes-data-science-und-machine-learning-mit-jupyter
 target_group_open_for: Students and employees of University of Leipzig
+restricted: true
 login_process: Login via SC account
 features:
-  version: JupyterHub 3.1.0, JupyterLab 3.5.3
-  kernels: ["Python 3.11", "Python 3.9 OpenCV 4.7", "Python 3.9 PyTorch 1.10", "Python 3.9 TensorFlow 2.6.2", "SageMath 10.0", "R 4.2.2", "Julia 1.8.5"]
+  version: JupyterHub 3.1.0; JupyterLab 3.5.3
+  programming_languages: ["Python 3.11", "SageMath 10.0", "R 4.2.2", "Julia 1.8.5"]
+  environments: ["Python 3.9 OpenCV 4.7", "Python 3.9 PyTorch 1.10", "Python 3.9 TensorFlow 2.6.2"]
+  environments_info: ""
   extensions: ["server-proxy", "jupyterlab-manager", "webio-jupyterlab-provider", "jupyterlab_pygments", "jupyterlab_lmod"]
   proxy_apps: []
   install: true
