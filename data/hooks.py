@@ -23,11 +23,25 @@ def generate_cards(*args, **kwargs):
                         logo = file_name.split("/")[-1][:-4]+"png"
                     else:
                         logo = "default-logo.png"
-                    
-                outfile.write("- title: %s\n"%d["title"])
+                url_requires = d.get("service_url_requirement", False)
+                if url_requires:
+                    service_url = "#"
+                    button_attr = ".md-button--disabled"
+                else:
+                    service_url = d["service_url"]
+                    button_attr = ".md-button .md-button--primary"
+                lock = ":material-lock:" if d.get("restricted", True) else ":material-lock-open-variant:"
+
+                outfile.write("- title: %s\n" % d["title"])
                 outfile.write("""  content: |
-    Provider: *%s*\n
+    Provider: *%s*
+    <p class=\"nt-card-text\">Target Group: %s</p>\n
     <div class=\"nfdi-card-link\">[:octicons-arrow-right-24: Service Details](details/%s.md)\n
-    [:material-lock: Login](%s){.md-button .md-button--primary}</div>\n"""%(d["provider"],service_name, d["service_url"]))
+    [%s Login](%s){%s}</div>\n""" % (d["provider"],
+                                     d["target_group_open_for"],
+                                     service_name,
+                                     lock,
+                                     service_url,
+                                     button_attr))
                 outfile.write("  image: assets/%s\n" % logo)
                 outfile.write("  icon: \":octicons-arrow-right-24:\"\n")

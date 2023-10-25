@@ -5,28 +5,45 @@ support: fokus@izus.uni-stuttgart.de
 health_api_url: 
 documentation_url: 
 target_group_open_for: Researchers of NFDI4Ing
+restricted: true
 login_process: Login via Shibboleth (DFN-AAI & eduGAIN federation)
 features:
   version: JupyterHub 1.x (lab view)
-  kernels: ["Python", "Matlab", "Julia", "R"]
+  programming_languages: ["Python", "Matlab", "Julia", "R"]
+  environments: []
+  environments_info: ""
   extensions: []
   proxy_apps: ["Matlab IDE"]
   install: true
   shared_folder: false
   persistent_storage: true
   misc: ["WebDAV connection possible"]
+technicals:
+  platform: Linux Virtual Machine
+  deployment: Docker compose with pre-defined Jupyter Server images
+  login_attributes: ["pairwise-id", "displayName", "mail"]
+  hardware_location: "Stuttgart, Germany"
+  misc: []
 resources:
   default_server_user: 1
   max_server_user: 1
   default_cpu: 1
   max_cpu: 4
+  total_cpu: 40
+  burst_total_cpu: 40
   default_cpu_time: 1 h
   max_cpu_time: 72 h
   default_memory: 100 MB
   max_memory: 4 GB
+  total_memory: 32 GB
+  burst_total_memory: 32 GB
   default_gpu: 0
   max_gpu: 0
+  total_gpu: 0
+  burst_total_gpu: 0
   default_disk: 10 GB
   max_disk: 10 GB
   default_persistent_disk: 2 GB
   max_persistent_disk: 2 GB
+usage:
+  average_daily_sessions: 1

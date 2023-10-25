@@ -1,32 +1,53 @@
 title: 
 provider: 
-service_url: 
+service_url:
+service_url_requirement:
 support: 
 health_api_url: 
 documentation_url: 
-target_group_open_for: 
-login_process: 
+target_group_open_for:
+restricted:
+login_process:
 features:
   version: 
-  kernels: []
+  programming_languages: []
+  environments: []
+  environments_info:
   extensions: []
   proxy_apps: []
   install: 
   shared_folder:
   persistent_storage:
   misc: []
+technicals:
+  platform:
+  deployment:
+  deployment_url:
+  login_attributes: []
+  hardware_location:
+  misc: []
 resources:
   default_server_user: 
   max_server_user: 
   default_cpu: 
-  max_cpu: 
+  max_cpu:
+  total_cpu:
+  burst_total_cpu:
   default_cpu_time:
   max_cpu_time:
   default_memory:
   max_memory:
+  total_memory:
+  burst_total_memory:
   default_gpu:
   max_gpu:
+  total_gpu:
+  burst_total_gpu:
   default_disk:
   max_disk:
   default_persistent_disk:
   max_persistent_disk:
+  total_disk:
+  burst_total_disk:
+usage:
+  average_daily_sessions:

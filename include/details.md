@@ -42,10 +42,19 @@ __Documentation__
     - {{ feature }}
     {% endfor %}
 
-{% if features.kernels %}
+{% if (features.programming_languages or features.environments) %}
 === "Kernels"
 
     {% for kernel in features.kernels %}
+    {% if features.programming_languages %}
+    Programming Languages:
+    {% for kernel in features.programming_languages %}
+    - {{ kernel }}
+    {% endfor %}
+    {% endif %}
+    {% if features.environments %}
+    Environments:
+    {% for kernel in features.environments %}
     - {{ kernel }}
     {% endfor %}
 {% endif %}
@@ -61,6 +70,7 @@ __Documentation__
 {% if features.proxy_apps %}
 === "Webproxy Applications"
 
+=== "Web-proxy Applications"
     {% for app in features.proxy_apps %}
     - {{ app }}
     {% endfor %}
@@ -69,12 +79,34 @@ __Documentation__
 ## Resources
 {{ title }} provides Jupyter servers within the following resource limits:
 
-| Resource | Default | Maximum |
-| -------- | ------- | ------- |
-| Number of Jupyter servers per user | {{ resources.default_server_user }} | {{ resources.max_server_user }} |
-| Number of CPUs | {{ resources.default_cpu }} | {{ resources.max_cpu }} |
-| CPU time | {{ resources.default_cpu_time }} | {{ resources.max_cpu_time }} |
-| Amount of memory | {{ resources.default_memory }} | {{ resources.max_memory }} |
-| Number of GPUs | {{ resources.default_gpu }} | {{ resources.max_gpu }} |
-| Disk space | {{ resources.default_disk }} | {{ resources.max_disk }} |
-| Persistent disk space | {{ resources.default_persistent_disk }} | {{ resources.max_persistent_disk }} |
+| Resource                           | Default                                 | Maximum                             |
+|------------------------------------|-----------------------------------------|-------------------------------------|
+| Number of Jupyter servers per user | {{ resources.default_server_user }}     | {{ resources.max_server_user }}     |
+| Number of CPUs                     | {{ resources.default_cpu }}             | {{ resources.max_cpu }}             |
+| CPU time                           | {{ resources.default_cpu_time }}        | {{ resources.max_cpu_time }}        |
+| Amount of memory                   | {{ resources.default_memory }}          | {{ resources.max_memory }}          |
+| Number of GPUs                     | {{ resources.default_gpu }}             | {{ resources.max_gpu }}             |
+| Disk space                         | {{ resources.default_disk }}            | {{ resources.max_disk }}            |
+| Persistent disk space              | {{ resources.default_persistent_disk }} | {{ resources.max_persistent_disk }} |
+
+{% if technicals %}
+## Technicals
+Some technical insights about {{ title }}:
+{% if technicals.platform %}
+- Platform: {{ technicals.platform }}
+{% endif %}
+{% if technicals.deployment %}
+- Deployment: {{ technicals.deployment }} {% if technicals.deployment_url %} [Further information]({{ technicals.deployment_url }}) {% endif %}
+{% endif %}
+{% if technicals.login_attributes %}
+- Required attributes, entitlements or memberships for Login: {{ technicals.login_attributes }}
+{% endif %}
+{% if technicals.hardware_location %}
+- Hardware location: {{ technicals.hardware_location }}
+{% endif %}
+{% if technicals.misc %}
+{% for feature in technicals.misc %}
+- {{ feature }}
+{% endfor %}
+{% endif %}
+{% endif %}

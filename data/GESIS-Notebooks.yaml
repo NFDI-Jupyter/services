@@ -5,17 +5,21 @@ support: notebooks@gesis.org
 health_api_url: http://notebooks.gesis.org/binder/health
 documentation_url: https://the-turing-way.netlify.app/communication/binder/zero-to-binder.html
 target_group_open_for: Open, with a focus on Computational Social Science
+restricted: false
 login_process: Open
-deployment_url: https://github.com/gesiscss/orc2
 features:
   version: JupyterHub 3.0.0-beta.1, BinderHub
-  kernels: ["configurable by the user"]
+  programming_languages: ["configurable by the user"]
+  environments: ["configurable by the user"]
   extensions: ["configurable by the user"]
   proxy_apps: []
   install: true
   shared_folder: false
   persistent_storage: false
   misc: ["Part of the BinderHub Federation"]
+technicals:
+  deployment_url: https://github.com/gesiscss/orc2
+  misc: []
 resources:
   default_server_user: 1
   max_server_user: 250
