@@ -5,7 +5,7 @@ import mkdocs_gen_files
 
 # get all data
 data_dir = "data"
-exclude = ["template.yaml", "hooks.py", "cardinfo.yaml"]
+exclude = ["template.yaml", "hooks.py", "cardinfo.yaml", "kernels_and_extensions.yml"]
 files = glob.glob(os.path.join(data_dir, "*.yaml"))
 services_names = [os.path.splitext(os.path.basename(file_name))[0] for file_name in files]
 

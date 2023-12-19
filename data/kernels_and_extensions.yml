@@ -1,0 +1,30 @@
+Links:
+  Python: https://github.com/python/python
+  Matlab: https://github.com/mathworks/jupyter-matlab-proxy
+  R: https://github.com/IRkernel/IRkernel
+  Octave: https://github.com/Calysto/octave_kernel
+  Sage: https://github.com/sagemath/sage
+  gnuplot: https://github.com/has2k1/gnuplot_kernel
+  Mathematica: https://github.com/WolframResearch/WolframLanguageForJupyter
+  Cling: https://github.com/jupyter-xeus/xeus-cling
+  evcxr: https://github.com/evcxr/evcxr
+  Gophernotes: https://github.com/gopherdata/gophernotes
+  Calysto Scheme: https://github.com/Calysto/calysto_scheme
+  Bash: https://github.com/takluyver/bash_kernel
+  JavaScript: https://github.com/n-riesco/ijavascript
+  Ruby: https://github.com/SciRuby/iruby
+  Ansible: https://github.com/ansible/ansible-jupyter-kernel
+  Cling: https://github.com/jupyter-xeus/xeus-cling
+  TensorFlow: https://www.tensorflow.org/tensorboard
+  Gurobi: https://www.gurobi.com/documentation/
+  PyTorch: https://pytorch.org/docs/stable/index.html
+  SageMath: https://github.com/sagemath/sage
+  Julia: https://github.com/JuliaLang/IJulia.jl
+  C++: https://github.com/jupyter-xeus/xeus-cling
+  Rust: https://depth-first.com/articles/2020/09/21/interactive-rust-in-a-repl-and-jupyter-notebook-with-evcxr/
+  Go: https://github.com/gopherdata/gophernotes
+  Scheme: https://github.com/Calysto/calysto_scheme
+  Python 3.9: https://docs.jupyter.org/en/latest/install/notebook-classic.html
+  C++ 11/14/17: https://github.com/AnthonyCalandra/modern-cpp-features
+  Matlab 2020b: https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/support/sysreq/files/system-requirements-release-2020b-linux.pdf
+  Matlab 2022b: https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/support/sysreq/files/system-requirements-release-2022b-windows.pdf
