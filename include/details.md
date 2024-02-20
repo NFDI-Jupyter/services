@@ -1,3 +1,4 @@
+icon: fontawesome/solid/info
 # {{ title }}
 The {{ title }} can be reached [here]({{ service_url }}) and is provided by {{ provider }}.
 
@@ -48,8 +49,8 @@ __Documentation__
     {% if features.programming_languages %}
     Programming Languages:
     {% for kernel in features.programming_languages %}
-    {% if Links[kernel] %}
-    - [{{ kernel }}]({{ Links[kernel] }})
+    {% if Links[kernel | lower] %}
+    - [{{ kernel }}]({{ Links[kernel | lower] }})
     {% else %}
     - {{ kernel }}
     {% endif %}
@@ -58,7 +59,9 @@ __Documentation__
     {% if features.environments %} 
     Environments:
     {% for kernel in features.environments %}
-    - {{ kernel }} {% if Links[kernel] %} {{ Links[kernel] }} {% endif %}
+-   {{ kernel }} {% if Links[kernel] %} [{{ Links[kernel] }}]({{ Links[kernel] }}) 
+    {% else %}  
+    {% endif %}
     {% endfor %}
     {% endif %}
 {% endif %}
