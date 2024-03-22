@@ -1,5 +1,6 @@
 title: Jupyter-JSC
 provider: Juelich Supercomputing Centre
+provider_location: Jülich
 service_url: https://jupyter-jsc.fz-juelich.de
 support: ds-support@fz-juelich.de
 health_api_url: 

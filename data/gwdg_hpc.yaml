@@ -1,5 +1,6 @@
 title: SCC Jupyterhub
 provider: GWDG
+provider_location: Göttingen
 service_url: https://jupyter-hpc.gwdg.de
 support: hpc-support@gwdg.de
 health_api_url: https://jupyter-hpc.gwdg.de/hub/api

@@ -1,5 +1,6 @@
 title: RWTH HPC JupyterHub
 provider: ITC RWTH Aachen University
+provider_location: Aachen
 service_url: https://jupyterhub.hpc.itc.rwth-aachen.de:9651/
 service_url_requirement: Network address of RWTH, FH Aachen, Bochum, Bonn, Cern, Darmstadt, Duisburg/Essen, Erlangen, Hagen, Desy, Juelich, LRZ Muenchen, Muenster, Siegen, Wien, Wuppertal or Saarland University
 support: servicedesk@itc.rwth-aachen.de

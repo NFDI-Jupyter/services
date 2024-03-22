@@ -1,5 +1,6 @@
 title: GESIS Notebooks
 provider: GESIS – Leibniz Institute for the Social Sciences
+provider_location: Mannheim
 service_url: http://notebooks.gesis.org
 support: notebooks@gesis.org
 health_api_url: http://notebooks.gesis.org/binder/health

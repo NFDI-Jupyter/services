@@ -1,5 +1,6 @@
 title: NFDI4Ing JupyterHub
 provider: University of Stuttgart
+provider_location: Stuttgart
 service_url: https://jupyter.nfdi4ing.de
 support: fokus@izus.uni-stuttgart.de
 health_api_url: 

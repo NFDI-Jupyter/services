@@ -1,5 +1,6 @@
 title: MPCDF JupyterHub
 provider: Max Planck Computing and Data Facility
+provider_location: Garching
 service_url: https://notebooks.mpcdf.mpg.de
 support: support@mpcdf.mpg.de
 health_api_url: 

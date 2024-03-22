@@ -1,0 +1,7 @@
+mkdocs-material
+mkdocs-gen-files
+mkdocs-macros-plugin
+mkdocs-simple-hooks
+neoteroi-mkdocs
+requests
+PyYAML

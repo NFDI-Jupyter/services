@@ -1,5 +1,6 @@
 title: PC² JupyterHub
 provider: Paderborn Center for Parallel Computing, University of Paderborn
+provider_location: Paderborn
 service_url: https://jh.pc2.uni-paderborn.de
 service_url_requirement: VPN or on-site at the University of Paderborn
 support: pc2-support@uni-paderborn.de

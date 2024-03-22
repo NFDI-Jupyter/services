@@ -1,5 +1,6 @@
 title: University of Münster JupyterHub
 provider: University of Münster
+provider_location: Münster
 service_url: https://jupyterhub.uni-muenster.de
 support:
 health_api_url: https://jupyterhub.uni-muenster.de/hub/api/health

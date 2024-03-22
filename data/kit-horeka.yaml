@@ -1,5 +1,6 @@
 title: HoreKa Jupyterhub
 provider: Karlsruhe Institute of Technology
+provider_location: Karlsruhe
 service_url: https://hk-jupyter.scc.kit.edu
 support: https://support.nhr.kit.edu
 health_api_url: 

@@ -1,5 +1,6 @@
 title: Jupyter-Cloud
 provider: GWDG
+provider_location: Göttingen
 service_url: https://jupyter-cloud.gwdg.de
 support: support@gwdg.de
 health_api_url: 

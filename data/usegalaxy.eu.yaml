@@ -1,5 +1,6 @@
 title: Interactive Tools of European Galaxy Server
 provider: University of Freiburg
+provider_location: Freiburg
 service_url: https://live.usegalaxy.eu
 support: contact@usegalaxy.eu  
 health_api_url: https://status.galaxyproject.org
