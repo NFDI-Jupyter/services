@@ -1,27 +1,31 @@
 title: Jupyter-JSC
 provider: Juelich Supercomputing Centre
 service_url: https://jupyter.jsc.fz-juelich.de
-health_api_url: https://jupyter.jsc.fz-juelich.de/hub/api
 support: ds-support@fz-juelich.de
-health_api_url: 
+health_api_url: https://jupyter.jsc.fz-juelich.de/hub/api
 documentation_url: https://docs.jupyter.jsc.fz-juelich.de
 target_group_open_for: HPC users of JSC. Helmholtz users in general
 restricted: true
 login_process: Login via JSC account or Helmholtz AAI
 features:
-  version: JupyterHub 4.1.5; JupyterLab 3.6, 4.2, users may start their own docker images
-  programming_languages: ["Bash", "Cling", "JavaScript", "Julia", "Octave", "R", "Ruby"]
+  version: JupyterHub 4.1.5; JupyterLab 3.6, 4.2
+  programming_languages: ["Python", "Bash", "Cling", "JavaScript", "Julia", "Octave", "R", "Ruby"]
   environments: ["PyDeepLearning", "PyQuantum", "PyVisualization", "Custom"]
-  environments_info: "https://docs.jupyter-jsc.fz-juelich.de/github/FZJ-JSC/jupyter-jsc-notebooks/blob/documentation/02-Configuration/01-Kernels&Proxies.ipynb"
+  environments_info: "https://docs.jupyter.jsc.fz-juelich.de/github/FZJ-JSC/jupyter-jsc-notebooks/blob/documentation/02-Configuration/01-Kernels&Proxies.ipynb"
   extensions: ["Bokeh", "JupyterLab Preview", "JupyterLab Manager", "JupyterLab Sidecar", "JupyterLab Git", "JupyterLab server proxy", "JupyterLab toc", "JupyterLab lsp", "JupyterLab quickopen", "JupyterLab pyviz", "JupyterLab Code Formatter", "BQPlot", "Dask Labextension", "IPyVolume", "ITKWidgets", "Leaflet", "Matplotlib", "ThreeJS", "Vue", "Vuetify", "JuypterLab Control", "JupyterLab Dash", "JupyterLab Datawidgets", "JupyterLab GitLab", "JupyterLab Lmod", "JupyterLab plotly", "JupyterLab System Monitor", "JupyterLAb Theme Toggle", "JupyterLab topbar extension", "JupyterLab iframe", "nbdime", "plotlywidget", "pvlink", "Jupyter Slurm Provisioner", "NVDashboard"]
   proxy_apps: ["XPra", "NESTDesktop", "MatLab", "RStudio"]
   install: true
   shared_folder: false
   persistent_storage: true
   misc: ["Start on multiple (external) systems possible (including HPC). Resources depend highly on system",
+         "Users may start their own docker images",
          "2FA authentication available",
          "WebDAV connection possible"]
 technicals:
+  platform: OpenStack
+  deployment: Kubernetes
+  deployment_url: https://github.com/FZJ-JSC/jupyter-jsc-deployment/
+  hardware_location: Juelich Supercomputing Centre
   misc: ["SSL encryption between JupyterLab and JupyterHub"]
 resources:
   default_server_user: 1
@@ -38,3 +42,5 @@ resources:
   max_disk:
   default_persistent_disk: 
   max_persistent_disk: 
+usage:
+  average_daily_sessions: 130
