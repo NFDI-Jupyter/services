@@ -32,12 +32,18 @@ resources:
   max_server_user: 100
   default_cpu: 2
   max_cpu: 1024
+  total_cpu: 9190
+  burst_total_cpu: 9257
   default_cpu_time: 30 min
   max_cpu_time: 24 h
   default_memory: 96 GB
   max_memory: 768 GB
+  total_memory: 1290384 GB
+  burst_total_memory: 1304208 GB
   default_gpu: 0
   max_gpu: 4
+  total_gpu: 4880
+  burst_total_gpu: 4908
   default_disk: 10 GB
   max_disk:
   default_persistent_disk: 
