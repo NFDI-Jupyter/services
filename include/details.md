@@ -1,3 +1,4 @@
+icon: fontawesome/solid/info
 # {{ title }}
 The {{ title }} can be reached [here]({{ service_url }}) and is provided by {{ provider }}.
 
@@ -12,7 +13,7 @@ __Target group__
 
 __Login process__
 
-: {{ login_process }}
+: {{ login_process }} 
 
 __Support__
 
@@ -20,10 +21,11 @@ __Support__
 
 __Documentation__
 
-: {{ documentation_url }}
+: {% if documentation_url %}[{{ documentation_url }}]({{ documentation_url }}){% else %}None{% endif %}
 
 
-## Features
+
+## Features 
 {{ title }} offers:
 
 === "General"
@@ -42,18 +44,24 @@ __Documentation__
     - {{ feature }}
     {% endfor %}
 
-{% if (features.programming_languages or features.environments) %}
-=== "Kernels"
+{% if (features.programming_languages or features.environments) %} 
+=== "Kernels :material-information-outline:{ title="Links to Kernels" }" 
     {% if features.programming_languages %}
     Programming Languages:
     {% for kernel in features.programming_languages %}
+    {% if Links[kernel | lower] %}
+    - [{{ kernel }}]({{ Links[kernel | lower] }})
+    {% else %}
     - {{ kernel }}
-    {% endfor %}
     {% endif %}
-    {% if features.environments %}
+    {% endfor %}
+{% endif %}
+    {% if features.environments %} 
     Environments:
     {% for kernel in features.environments %}
-    - {{ kernel }}
+-   {{ kernel }} {% if Links[kernel] %} [{{ Links[kernel] }}]({{ Links[kernel] }}) 
+    {% else %}  
+    {% endif %}
     {% endfor %}
     {% endif %}
 {% endif %}
@@ -86,7 +94,7 @@ __Documentation__
 | Persistent disk space              | {{ resources.default_persistent_disk }} | {{ resources.max_persistent_disk }} |
 
 {% if technicals %}
-## Technicals
+## Technical
 Some technical insights about {{ title }}:
   {% if technicals.platform %}
 - Platform: {{ technicals.platform }}
