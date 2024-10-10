@@ -74,7 +74,7 @@ resources: # Information about available resources on the instance
   # Guarantied total amount of memory for the whole Jupyterhub instance
   total_memory: 192 GB
   # Scaled total amount of memory for the whole JupyterHub instance. Normally not exclusive, depends on other factors.
-  burst_total_memory: 384 GB
+  burst_total_memory: 512 GB
   # Default number of GPU for a Jupyter server
   default_gpu: 0
   # Maximum number of GPU for a Jupyter server
