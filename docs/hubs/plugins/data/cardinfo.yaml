@@ -36,7 +36,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/usegalaxy.eu.md)
 
     [:material-lock-open-variant: Login](https://live.usegalaxy.eu){.md-button .md-button--primary}</div>
-  image: assets/default-logo.png
+  image: assets/usegalaxy.eu.png
   icon: ":octicons-arrow-right-24:"
 - title: University of Münster JupyterHub
   content: |
@@ -66,7 +66,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/GESIS-Notebooks.md)
 
     [:material-lock-open-variant: Login](http://notebooks.gesis.org){.md-button .md-button--primary}</div>
-  image: assets/default-logo.png
+  image: assets/GESIS-Notebooks.png
   icon: ":octicons-arrow-right-24:"
 - title: HoreKa Jupyterhub
   content: |
@@ -126,5 +126,5 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/jupyter-jsc.fz-juelich.de.md)
 
     [:material-lock: Login](https://jupyter.jsc.fz-juelich.de){.md-button .md-button--primary}</div>
-  image: assets/default-logo.png
+  image: assets/jupyter-jsc.fz-juelich.de.png
   icon: ":octicons-arrow-right-24:"

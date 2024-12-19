@@ -74,7 +74,7 @@ extra:
   logo: "images/logo.png"
 
 copyright: |
-  &copy; 2024 Forschungszentrum Jülich | <a href="/hidden/imprint" target="_blank">Legal Notice</a>
+  &copy; 2024 Forschungszentrum Jülich | <a href="/imprint" target="_blank">Legal Notice</a>
 
 
 nav:
