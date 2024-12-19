@@ -27,7 +27,6 @@ __Documentation__
 {{ title }} offers:
 
 === "General"
-
     - Version(s): {{ features.version }}
     {% if features.install %}
     - Temporarly install new packages by the user
@@ -71,7 +70,6 @@ __Documentation__
     - {{ app }}
     {% endfor %}
 {% endif %}
-
 ## Resources
 {{ title }} provides Jupyter servers within the following resource limits:
 

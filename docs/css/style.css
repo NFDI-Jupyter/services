@@ -1,0 +1,26 @@
+[data-md-color-scheme="fzj"] {
+  --md-primary-fg-color:        #023d6b;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #272727;
+}
+:root {
+  --md-primary-fg-color: #023d6b;
+}
+
+/* Logo styling */
+.md-sidebar--primary .md-logo {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Optional: Customize logo size */
+.md-logo img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Hide the logo in the header */
+.md-header .md-logo {
+  display: none;
+}
