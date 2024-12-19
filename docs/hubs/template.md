@@ -1,67 +1,118 @@
 # Join the list
 
+
 To become part of the list of Jupyter services for German researchers you have to
 provide a yaml-file with the information listed in the table below. 
-You can check out existing yaml-files in the `data` folder.
-In the same folder there is also a template you can base on.
-To add a logo of your service provide one in the `assets` folder. 
-When everything is ready, please add a pull request to the main branch of this
-repository. 
+You can check out existing yaml-files in the [data](https://github.com/NFDI-Jupyter/services/tree/main/docs/hubs/plugins/data) folder.
+In the same folder there is also a [template](https://github.com/NFDI-Jupyter/services/blob/main/docs/hubs/plugins/data/template.yaml) you can base on.
+To add a logo of your service provide one in the [assets](https://github.com/NFDI-Jupyter/services/tree/main/docs/hubs/plugins/assets) folder. 
+When everything is ready, please add a pull request to the main branch of this [repository](https://github.com/NFDI-Jupyter/services). 
 If you need further assistance or have other questions, 
 do not hesitate to open an issue.
-
-| YAML&nbsp;Key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Required? | Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            | Example                                                    |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
-| `title`                                                                                                                                                                                                       | yes       | The service name. If too general, should include a provider or project context.                                        | NFDI4Ing JupyterHub                                        |
-| `provider`                                                                                                                                                                                                    | yes       | All service providers.                                                                                                 | University of Stuttgart, Technical University of Darmstadt |
-| `service_url`                                                                                                                                                                                                 | yes       | Link address to the entrypoint for users.                                                                              | https://jupyter.nfdi4ing.de                                |
-| `service_url_requirement`                                                                                                                                                                                     | no        | If the `service_url` is not public available, the requirements to reach it can be stated here.                         | VPN of University of Stuttgart                             |
-| `support`                                                                                                                                                                                                     | yes       | Email address where to get help.                                                                                       | fokus@izus.uni-stuttgart.de                                |
-| `health_api_url`                                                                                                                                                                                              | no        | Healthcheck URL                                                                                                        | green / orange / red                                       |
-| `documentation_url`                                                                                                                                                                                           | no        | Link address to service specific documentation for users.                                                              |                                                            |
-| `target_group_open_for`                                                                                                                                                                                       | yes       | Roles, domain, NFDI consortia, University, etc.                                                                        | Researchers of NFDI4Ing                                    |
-| `restricted`                                                                                                                                                                                                  | yes       | Whether any researcher in Germany can use the service                                                                  | false                                                      |        
-| `login_process`                                                                                                                                                                                               | yes       | How is the login performed; Login-URL                                                                                  | Login via DFN-AAI & eduGAIN                                |
-| `features`                                                                                                                                                                                                    | yes       | What the service offers.                                                                                               |                                                            |
-| -- `version`                                                                                                                                                                                                  | yes       | Version of JupyterHub; classic notebook or lab view?                                                                   | 1.x JupyterHub (classic view)                              |
-| -- `programming_languages`                                                                                                                                                                                    | no        | List of supported programming languages (kernels).                                                                     | Python, Julia, R                                           |
-| -- `environments`                                                                                                                                                                                             | no        | List of supported environments (e.g., Python virtualenv) configured as kernels.                                        | Python-Keras, Python-PyTorch                               |
-| -- `environments_info`                                                                                                                                                                                        | no        | Link to information about the supported environments, if not included under `documentation_url`.                       |                                                            |
-| -- `extensions`                                                                                                                                                                                               | no        | List of pre-installed JupyterHub extensions.                                                                           |                                                            |
-| -- `proxy_apps`                                                                                                                                                                                               | no        | List of server-proxy featured applications.                                                                            | MATLAB IDE                                                 |
-| -- `install`                                                                                                                                                                                                  | yes       | Whether it is allowed to install further packages, kernels, extensions.                                                | true                                                       |
-| -- `shared_folder`                                                                                                                                                                                            | yes       | Whether there is a folder to share documents with others.                                                              | false                                                      |
-| -- `persistent_storage`                                                                                                                                                                                       | yes       | Whether files can survive the docker session.                                                                          | true                                                       |
-| -- `misc`                                                                                                                                                                                                     | no        | List of other features you find relevant.                                                                              | dynamic image creation                                     | 
-| `technicals`                                                                                                                                                                                                  | no        | Information about the technology stack used.                                                                           |                                                            |
-| -- `platform`                                                                                                                                                                                                 | no        | The underlying system below JupyterHub.                                                                                | HPC; Openstack, ...                                        |
-| -- `deployment`                                                                                                                                                                                               | no        | The way Jupyter is installed on the system.                                                                            | Docker; Kubernetes                                         |
-| -- `deployment_url`                                                                                                                                                                                           | no        | Link to more (technical) information or a (Git) repository about the deployment or other administration tasks.         |                                                            |
-| -- `login_attributes`                                                                                                                                                                                         | no        | List of required attributes, entitlements or memberships for login.                                                    | SAML:persistend_id, SAML:display_name, SAML:email          |
-| -- `hardware_location`                                                                                                                                                                                        | no        | Where the resources (compute / storage) are located.                                                                   | Germany; Europe                                            |
-| -- `misc`                                                                                                                                                                                                     | no        | List of other technicals you find relevant.                                                                            |                                                            |
-| `resources`                                                                                                                                                                                                   | yes       | Information about available resources on the instance.                                                                 |                                                            |
-| -- `default_server_user`                                                                                                                                                                                      | no        | Default number of Jupyter servers per user.                                                                            | 1                                                          |
-| -- `max_server_user`                                                                                                                                                                                          | yes       | Maximum number of Jupyter servers per user.                                                                            | 5                                                          |
-| -- `default_cpu`                                                                                                                                                                                              | no        | Default number of CPU for a Jupyter server.                                                                            | 1                                                          |
-| -- `max_cpu`                                                                                                                                                                                                  | yes       | Maximum number of CPU for a Jupyter server.                                                                            | 4                                                          |
-| -- `total_cpu`                                                                                                                                                                                                | yes       | Guarantied total number of CPUs for the whole Jupyterhub instance.                                                     | 50                                                         |
-| -- `burst_total_cpu`                                                                                                                                                                                          | yes       | Scaled total number of CPUs for the whole JupyterHub instance. Normally not exclusive, depends on other factors.       | 50                                                         |                  
-| -- `default_cpu_time`                                                                                                                                                                                         | no        | Default CPU time for a Jupyter server.                                                                                 | 1 h                                                        |
-| -- `max_cpu_time`                                                                                                                                                                                             | yes       | Maximum CPU time for a Jupyter server.                                                                                 | 72 h                                                       |
-| -- `default_memory`                                                                                                                                                                                           | no        | Default amount of memory for a Jupyter server.                                                                         | 100 MB                                                     |
-| -- `max_memory`                                                                                                                                                                                               | yes       | Maximum amount of memory for a Jupyter server.                                                                         | 4 GB                                                       |
-| -- `total_memory`                                                                                                                                                                                             | yes       | Guarantied total amount of memory for the whole Jupyterhub instance.                                                   | 500 GB                                                     |
-| -- `burst_total_memory`                                                                                                                                                                                       | yes       | Scaled total amount of memory for the whole JupyterHub instance. Normally not exclusive, depends on other factors.     | 600 GB                                                     |                  
-| -- `default_gpu`                                                                                                                                                                                              | no        | Default number of GPU for a Jupyter server.                                                                            | 0                                                          |
-| -- `max_gpu`                                                                                                                                                                                                  | yes       | Maximum number of GPU for a Jupyter server.                                                                            | 0                                                          |
-| -- `total_gpu`                                                                                                                                                                                                | yes       | Guarantied total number of GPUs for the whole Jupyterhub instance.                                                     | 10                                                         |
-| -- `burst_total_gpu`                                                                                                                                                                                          | yes       | Scaled total number of GPUs for the whole JupyterHub instance. Normally not exclusive, depends on other factors.       | 10                                                         |                  
-| -- `default_disk`                                                                                                                                                                                             | no        | Default amount of disk space (maybe temporary) for a Jupyter server.                                                   | 10 GB                                                      |
-| -- `max_disk`                                                                                                                                                                                                 | yes       | Maximum amount of disk space (maybe temporary) for a Jupyter server.                                                   | 10 GB                                                      |
-| -- `default_persistent_disk`                                                                                                                                                                                  | no        | Default amount of disk space that survives a Jupyter session.                                                          | 2 GB                                                       |
-| -- `max_persistent_disk`                                                                                                                                                                                      | yes       | Maximum amount of disk space that survives a Jupyter session.                                                          | 2 GB                                                       |
-| -- `total_disk`                                                                                                                                                                                               | yes       | Guarantied total amount of disk space for the whole Jupyterhub instance.                                               | 50 TB                                                      |
-| -- `burst_total_disk`                                                                                                                                                                                         | yes       | Scaled total amount of disk space for the whole JupyterHub instance. Normally not exclusive, depends on other factors. | 50 TB                                                      |                  
-| `usage`                                                                                                                                                                                                       | no        | Statistical information about the Jupyterhub instance.                                                                 |                                                            |
-| -- `average_daily_sessions`                                                                                                                                                                                   | yes       | Average number of Jupyter sessions per day.                                                                            | 10                                                         |
+  
+  
+## Template
+```
+# Service name. If too general, should include a provider or project context.
+title:
+# All service providers
+provider:
+# Link address to the entrypoint for users
+service_url:
+# If the service_url is not public available, the requirements to reach it
+service_url_requirement:
+# Email address where to get help
+support:
+# Healthcheck URL
+health_api_url:
+# Service specific documentation for users
+documentation_url:
+# Roles, domain, NFDI consortia, University, etc.
+target_group_open_for:
+# Whether any researcher in Germany can use the service (true / false)
+restricted:
+# How is the login performed; Login-URL
+login_process:
+features: # What the service offers.
+  # version of JupyterHub; classic notebook or lab view?
+  version:
+  # List of supported programming languages (kernels)
+  programming_languages: []
+  # List of supported environments (e.g., Python virtualenv) configured as kernels
+  environments: []
+  # Link to information about the supported environments, if not included under documentation_url
+  environments_info:
+  # List of pre-installed JupyterHub extensions
+  extensions: []
+  # List of server-proxy featured applications
+  proxy_apps: []
+  # Whether it is allowed to install further packages, kernels, extensions (true / false)
+  install:
+  # Whether there is a folder to share documents with others (true / false)
+  shared_folder:
+  # Whether files can survive the docker session (true / false)
+  persistent_storage:
+  # List of other features you find relevant
+  misc: []
+technicals: # Information about the technology stack used
+  # The underlying system below JupyterHub, e.g., HPC, Openstack
+  platform:
+  # The way Jupyter is installed on the system, e.g., Docker, Kubernetes
+  deployment:
+  # Link to more (technical) information or a (Git) repository about the deployment or other administration tasks
+  deployment_url:
+  # List of required attributes, entitlements or memberships for login
+  login_attributes: []
+  # Where the resources (compute / storage) are located
+  hardware_location:
+  # List of other technicals you find relevant
+  misc: []
+resources: # Information about available resources on the instance
+  # Default number of Jupyter servers per user
+  default_server_user:
+  # Maximum number of Jupyter servers per user
+  max_server_user:
+  # Default number of CPU for a Jupyter server
+  default_cpu:
+  # Maximum number of CPU for a Jupyter server
+  max_cpu:
+  # Guarantied total number of CPUs for the whole Jupyterhub instance
+  total_cpu:
+  # Scaled total number of CPUs for the whole JupyterHub instance. Normally not exclusive, depends on other factors.
+  burst_total_cpu:
+  # Default CPU time for a Jupyter server
+  default_cpu_time:
+  # Maximum CPU time for a Jupyter server
+  max_cpu_time:
+  # Default amount of memory for a Jupyter server
+  default_memory:
+  # Maximum amount of memory for a Jupyter server
+  max_memory:
+  # Guarantied total amount of memory for the whole Jupyterhub instance
+  total_memory:
+  # Scaled total amount of memory for the whole JupyterHub instance. Normally not exclusive, depends on other factors.
+  burst_total_memory:
+  # Default number of GPU for a Jupyter server
+  default_gpu:
+  # Maximum number of GPU for a Jupyter server
+  max_gpu:
+  # Guarantied total number of GPUs for the whole Jupyterhub instance
+  total_gpu:
+  # Scaled total number of GPUs for the JupyterHub instance. Normally not exclusive, depends on other factors.
+  burst_total_gpu:
+  # Default amount of disk space (maybe temporary) for a Jupyter server
+  default_disk:
+  # Maximum amount of disk space (maybe temporary) for a Jupyter server
+  max_disk:
+  # Default amount of disk space that survives a Jupyter session
+  default_persistent_disk:
+  # Maximum amount of disk space that survives a Jupyter session
+  max_persistent_disk:
+  # Guarantied total amount of disk space for the whole Jupyterhub instance
+  total_disk:
+  # Scaled total amount of disk space for the whole JupyterHub instance. Normally not exclusive, depends on other factors.
+  burst_total_disk:
+usage: # Statistical information about the Jupyterhub instance
+  # Average number of Jupyter sessions per day
+  average_daily_sessions:
+```

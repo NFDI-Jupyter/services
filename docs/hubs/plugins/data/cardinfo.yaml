@@ -6,7 +6,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/gwdg_hpc.md)
 
     [:material-lock: Login](https://jupyter-hpc.gwdg.de){.md-button .md-button--primary}</div>
-  image: assets/default-logo.png
+  image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: Jupyter4NFDI
   content: |
@@ -16,7 +16,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/jupyter4nfdi.md)
 
     [:material-lock: Login](https://hub.nfdi-jupyter.de){.md-button .md-button--primary}</div>
-  image: assets/default-logo.png
+  image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: RWTH HPC JupyterHub
   content: |
@@ -26,7 +26,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/RWTH-NFDI-Jupyter-Service.md)
 
     [:material-lock: Login](#){.md-button--disabled}</div>
-  image: assets/default-logo.png
+  image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: Interactive Tools of European Galaxy Server
   content: |
@@ -36,7 +36,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/usegalaxy.eu.md)
 
     [:material-lock-open-variant: Login](https://live.usegalaxy.eu){.md-button .md-button--primary}</div>
-  image: assets/usegalaxy.eu.png
+  image: plugins/assets/usegalaxy.eu.png
   icon: ":octicons-arrow-right-24:"
 - title: University of Münster JupyterHub
   content: |
@@ -46,7 +46,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/uni-muenster.md)
 
     [:material-lock: Login](https://jupyterhub.uni-muenster.de){.md-button .md-button--primary}</div>
-  image: assets/default-logo.png
+  image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: NFDI4Ing JupyterHub
   content: |
@@ -56,7 +56,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/nfdi4ing.md)
 
     [:material-lock: Login](https://jupyter.nfdi4ing.de){.md-button .md-button--primary}</div>
-  image: assets/default-logo.png
+  image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: GESIS Notebooks
   content: |
@@ -66,7 +66,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/GESIS-Notebooks.md)
 
     [:material-lock-open-variant: Login](http://notebooks.gesis.org){.md-button .md-button--primary}</div>
-  image: assets/GESIS-Notebooks.png
+  image: plugins/assets/GESIS-Notebooks.png
   icon: ":octicons-arrow-right-24:"
 - title: HoreKa Jupyterhub
   content: |
@@ -76,7 +76,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/kit-horeka.md)
 
     [:material-lock: Login](https://hk-jupyter.scc.kit.edu){.md-button .md-button--primary}</div>
-  image: assets/default-logo.png
+  image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: Webbasiertes Data Science und Machine Learning mit Jupyter
   content: |
@@ -86,7 +86,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/uni-leipzig.md)
 
     [:material-lock: Login](#){.md-button--disabled}</div>
-  image: assets/default-logo.png
+  image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: PC² JupyterHub
   content: |
@@ -96,7 +96,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/pc2-upb.md)
 
     [:material-lock: Login](#){.md-button--disabled}</div>
-  image: assets/default-logo.png
+  image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: Jupyter-Cloud
   content: |
@@ -106,7 +106,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/gwdg.md)
 
     [:material-lock: Login](https://jupyter-cloud.gwdg.de){.md-button .md-button--primary}</div>
-  image: assets/default-logo.png
+  image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: MPCDF JupyterHub
   content: |
@@ -116,7 +116,7 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/mpcdf.md)
 
     [:material-lock: Login](https://notebooks.mpcdf.mpg.de){.md-button .md-button--primary}</div>
-  image: assets/default-logo.png
+  image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: Jupyter-JSC
   content: |
@@ -126,5 +126,5 @@
     <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/jupyter-jsc.fz-juelich.de.md)
 
     [:material-lock: Login](https://jupyter.jsc.fz-juelich.de){.md-button .md-button--primary}</div>
-  image: assets/jupyter-jsc.fz-juelich.de.png
+  image: plugins/assets/jupyter-jsc.fz-juelich.de.png
   icon: ":octicons-arrow-right-24:"

@@ -4,7 +4,7 @@
 Currently, **11** providers host **12** Jupyter services:
 
 <figure markdown>
-![Provider Map](assets/map_germany.svg){ width="450" }
+![Provider Map](plugins/assets/map_germany.svg){ width="450" }
     <figcaption>Map of Jupyter Providers in Germany</figcaption>
 </figure>
 
@@ -23,18 +23,18 @@ The following NFDI consortia contribute to one or more of the collected services
 ::cards:: cols=2
 
 - title: " "
-  image: assets/nfdi4ds_logo.png
+  image: plugins/assets/nfdi4ds_logo.png
 - title: " "
-  image: assets/DataPLANT_logo.svg
+  image: plugins/assets/DataPLANT_logo.svg
   
 ::/cards::
 
 ::cards:: cols=2 class_name="smaller"
   
 - title: " "
-  image: assets/nfdi4bioimage_logo.png
+  image: plugins/assets/nfdi4bioimage_logo.png
 - title: " "
-  image: assets/nfdi4ing_logo.png
+  image: plugins/assets/nfdi4ing_logo.png
 
 ::/cards::
 

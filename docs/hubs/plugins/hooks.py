@@ -19,7 +19,7 @@ def generate_cards(*args, **kwargs):
                 d = yaml.safe_load(fh)
                 logo = d.get("logo", None)
                 if logo is None:
-                    if os.path.exists("docs/hubs/assets/"+ file_name.split("/")[-1][:-4]+"png"):
+                    if os.path.exists("docs/hubs/plugins/assets/"+ file_name.split("/")[-1][:-4]+"png"):
                         logo = file_name.split("/")[-1][:-4]+"png"
                     else:
                         logo = "default-logo.png"
@@ -43,5 +43,5 @@ def generate_cards(*args, **kwargs):
                                      lock,
                                      service_url,
                                      button_attr))
-                outfile.write("  image: assets/%s\n" % logo)
+                outfile.write("  image: plugins/assets/%s\n" % logo)
                 outfile.write("  icon: \":octicons-arrow-right-24:\"\n")
