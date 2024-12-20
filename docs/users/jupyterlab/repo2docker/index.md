@@ -12,6 +12,33 @@ For example: [https://hub.nfdi-jupyter.de/r2d/gh/binder-examples/requirements](h
 The general structure for these direct links is:  
 **`https://hub.nfdi-jupyter.de/r2d/_repotype_/_repoowner_/_reponame_/_ref_`**
 
+In case you would like to add a badge to your Repository or Documentation:  
+
+<div>
+  <img src="../../../images/nfdi_badge.svg" alt="NFDIBadge">
+</div>
+```
+Markdown:
+[![NFDI](https://nfdi-jupyter.de/images/nfdi_badge.svg)](https://hub.nfdi-jupyter.de/r2d/gh/_repoowner_/_repotype_)
+
+RST:
+.. image:: https://nfdi-jupyter.de/images/nfdi_badge.svg
+ :target: https://hub.nfdi-jupyter.de/r2d/gh/_repoowner_/_repotype_
+```  
+  
+<div>
+  <img src="../../../images/jupyter4nfdi_badge.svg" alt="JupyterNFDIBadge">
+</div>
+```
+Markdown:
+[![Jupyter4NFDI](https://nfdi-jupyter.de/images/jupyter4nfdi_badge.svg)](https://hub.nfdi-jupyter.de/r2d/gh/_repoowner_/_repotype_)
+
+
+RST:
+.. image:: https://nfdi-jupyter.de/images/jupyter4nfdi_badge.svg
+ :target: https://hub.nfdi-jupyter.de/r2d/gh/_repoowner_/_repotype_
+```
+
 ### Parameters in the Link
 
 | Parameter    | Description                                                                 |
