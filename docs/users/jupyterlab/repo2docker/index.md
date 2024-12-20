@@ -27,8 +27,10 @@ The link also supports several **optional** query arguments to unlock additional
 
 | Parameter    | Description                                                                 |
 |--------------|-----------------------------------------------------------------------------|
+| `labpath`    | Add a path (relative or absolute) to a file which will be opened when starting the session. **Important:** The path must be URL-encoded. For example, `/home/jovyan/README.md` should be written as `%2Fhome%2Fjovyan%2FREADME.md`. |
+| `urlpath`    | Add a path to a url in your JupyterLab which will be opened when starting the sessions - e.g `voila`. **Important:** The path must be URL-encoded. |
 | `system`     | Specifies the system on which to start the repository. Default: Any [system](../../../features.md#1-systems-available) available to the user. |
-| `dataDir`    | Mounts the user's persistent storage on the selected [system](../../../features.md#1-systems-available) into the running session. **Important:** The path for `dataDir` must be URL-encoded. For example, `/home/jovyan/work` should be written as `%2Fhome%2Fjovyan%2Fwork`. |
+| `dataDir`    | Mounts the user's persistent storage on the selected [system](../../../features.md#1-systems-available) into the running session. **Important:** The path must be URL-encoded. For example, `/home/jovyan/work` should be written as `%2Fhome%2Fjovyan%2Fwork`. |
 | `flavor`     | Defines a specific flavor for the session. The availability of flavors depends on the selected system. If unsure, consult technical support. |
   
 Example: [https://hub.nfdi-jupyter.de/r2d/gh/binder-examples/requirements?system=JSC-Cloud&dataDir=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/r2d/gh/binder-examples/requirements?system=JSC-Cloud&dataDir=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}
