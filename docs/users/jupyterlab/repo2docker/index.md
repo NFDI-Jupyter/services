@@ -1,6 +1,6 @@
 # Repo2Docker ( Binder )
 
-Jupyter4NFDI offers **Repo2Docker ( Binder )**, which facilitates building Docker images directly from GitHub, GitLab, Zenodo or other sources. This capability allows users to easily set up environments that replicate their local development setups or share projects with others. Combined with the **[Direct Links](#direct-links)** or the [share](../../misc.md#share-button)** Button, it allows you easily to create FAIR digital objects.
+Jupyter4NFDI offers **Repo2Docker ( Binder )**, which facilitates building Docker images directly from GitHub, GitLab, Zenodo or other sources. This capability allows users to easily set up environments that replicate their local development setups or share projects with others. Combined with the **[Direct Links](#direct-links)** or the **[share](../../misc.md#share-button)** Button, it allows you easily to create FAIR digital objects.
 
 > This service is currently in a beta stadium. We will continue working on it to bring more features and improvements.
 
