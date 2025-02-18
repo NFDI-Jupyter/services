@@ -2,12 +2,14 @@ site_name: Jupyter4NFDI
 site_description: Jupyter4NFDI project overview
 site_author: WG RSE, NFDI Section Common Infrastructures, Jupyter4NFDI
 site_url: "https://NFDI-Jupyter.github.io/services"
+repo_url: https://github.com/NFDI-Jupyter/services
 theme:
   name: material 
   features:
     - nagivation.tabs
     - navigation.sections
     - navigation.collapse
+    - navigation.footer
     - toc.integrate
     - navigation.top
     - search.suggest
@@ -17,12 +19,26 @@ theme:
     - content.code.copy
   language: en
   logo: images/base4nfdi_logo.png
+  font:
+    text: Fira Sans
+    code: Roboto Mono
+    icon: 'mdi'
   favicon: images/nfdi_rgb_Wortmarke.png
   custom_dir: docs/custom
+  #palette:
+ #   - scheme: fzj
+ #     primary: teal
+ #     accent: purple
   palette:
-    - scheme: fzj
-      primary: teal
-      accent: purple
+    - scheme: default
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+
 
 plugins:
   - mkdocs-jupyter
@@ -72,10 +88,28 @@ extra_css:
 
 extra:
   logo: "images/logo.png"
+  generator: false
+  social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/NFDI-Jupyter/services
+  footer:
+      logo:
+        link: https://www.dfg.de/
+        img: images/dfg_logo_schriftzug_weiss_foerderung_en.gif
 
-copyright: |
-  &copy; 2024 Forschungszentrum Jülich | <a href="/imprint" target="_blank">Legal Notice</a>
-
+footer:
+  copyright: |
+    &copy; 2024 Forschungszentrum Jülich
+  lines: 
+    - "Partially funded by DFG as part of NFDI."
+    - "Grant Number 521453681"
+  links:
+    - name: Contact
+      link: https://nfdi-jupyter.de/support/
+    - name: Legal Notice
+      link: https://nfdi-jupyter.de/imprint/
+    - name: Privacy Policy
+      link: https://hub.nfdi-jupyter.de/hub/privacy
 
 nav:
   - General:
@@ -102,6 +136,7 @@ nav:
 
 plugins:
   - search
+#  - awesome-pages
   - gen-files:
       scripts:
         - docs/hubs/plugins/gen_detail_pages.py
