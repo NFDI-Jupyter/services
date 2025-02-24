@@ -1,3 +1,72 @@
+:root > * {
+    --md-primary-fg-color: #45546b;
+    --md-footer-bg-color: #45546b;
+    --md-footer-bg-color--dark: #45546b;
+    --md-typeset-a-color: #0abaf0;
+
+/* Accent color shades to side nav */
+    --md-accent-fg-color: #0abaf0;
+
+}
+
+/* Links globally */
+a {
+    text-decoration: none; /* Default behavior */
+  }
+  
+  /* Links in the content */
+  .md-typeset a:hover {
+    text-decoration: underline; /* Add underline on hover for content links */
+  }
+  
+  /* Side navigation links */
+  .md-nav__link {
+    text-decoration: none !important; /* Ensure no underline in the nav */
+  }
+
+footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer a {
+    color: #0abaf0 !important;
+}
+
+footer a:hover {
+    color: white !important;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        margin-right: 20px;
+    }
+}
+
+.footer-license {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.footer-textstyle {
+    text-align: center;
+    font-size: .6rem;
+    line-height: 1.6;
+    color: var(--md-footer-fg-color--light);
+}
+
 .md-typeset .grid {
 	grid-gap: .4rem;
 	display: grid;
