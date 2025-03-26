@@ -55,10 +55,10 @@ The link also supports several **optional** query arguments to unlock additional
 | `labpath`    | Add a path (relative or absolute) to a file which will be opened when starting the session. **Important:** The path must be URL-encoded. For example, `/home/jovyan/README.md` should be written as `%2Fhome%2Fjovyan%2FREADME.md`. |
 | `urlpath`    | Add a path to a url in your JupyterLab which will be opened when starting the sessions - e.g `voila`. **Important:** The path must be URL-encoded. |
 | `system`     | Specifies the system on which to start the repository. Default: Any [system](../../../features.md#1-systems-available) available to the user. |
-| `dataDir`    | Mounts the user's persistent storage on the selected [system](../../../features.md#1-systems-available) into the running session. **Important:** The path must be URL-encoded. For example, `/home/jovyan/work` should be written as `%2Fhome%2Fjovyan%2Fwork`. |
+| `localstoragepath`    | Mounts the user's persistent storage on the selected [system](../../../features.md#1-systems-available) into the running session. **Important:** The path must be URL-encoded. For example, `/home/jovyan/work` should be written as `%2Fhome%2Fjovyan%2Fwork`. |
 | `flavor`     | Defines a specific flavor for the session. The availability of flavors depends on the selected system. If unsure, consult technical support. |
   
-Example: [https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD?system=JSC-Cloud&dataDir=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD?system=JSC-Cloud&dataDir=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}
+Example: [https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD?system=JSC-Cloud&localstoragepath=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD?system=JSC-Cloud&localstoragepath=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}
 
 
 ### Comparison with MyBinder
@@ -70,7 +70,7 @@ Unlike MyBinder, the data persists even after closing the browser window or revi
 ### Empowering Workshop Instructors
 
 Workshop instructors can prepare their content on GitHub, and participants can easily access it by following a link like:  
-[https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repo_/HEAD?dataDir=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repo_/HEAD?dataDir=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}.
+[https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repo_/HEAD?localstoragepath=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repo_/HEAD?localstoragepath=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}.
 
 
 With the Direct Link feature, workshop instructors gain the ability to:  
@@ -134,12 +134,6 @@ These features will empower users to work more efficiently and tackle complex da
 
 ## Persistence and Shared Environments
 
-> If you use [Direct Links](#direct-links) with the `?dataDir=` [Query Arguments](#query-arguments-in-the-link) you can already use persistent storage. This feature will come to the frontend within the next months.
-
-Changes made within the running JupyterLab environment are **not persistent**. This means:
-
-- **Non-Persistent** Changes: Any modifications made to files or settings in the current JupyterLab session will be lost when the session is closed. They are only visible to the current user session and will not persist across restarts.
+Changes made within the running JupyterLab environment are **persistent**, if `Mount user data` is enbaled in the JupyterLab configuration. All files outside of the `Mount user data` directory are lost after a restart. 
+  
 - **No Shared State**: If you share a link to your environment, other users who start a JupyterLab session from that link will see the repository's original content, not any changes you’ve made in your session.
-- **No Persistent Storage**: The current Repo2Docker setup does not support persistent storage. If you need to save your work, download any necessary files before closing the session.
-
-> In the future, we plan to add persistent storage, allowing you to mount **your persistent data** directly into the session when it starts.
