@@ -1,7 +1,5 @@
 # JupyterLab 4.2
 
-This is the current default version of JupyterLab on Jupyter4NFDI. In the next sections we will describe how you can modify it to fit your needs, and give a brief overview of the installed software.
-
 ## Systems Available
 
 **JupyterLab 4.2** is available on these systems:
@@ -69,46 +67,6 @@ You can select them by navigating to the **Kernels and Extensions** tab on the l
 
 > Most extensions are always loaded. Others can be activated to your liking in the **Kernels and Extensions** tab in your JupyterLab configuration.
 
-## Install your own Extensions
-
-One of the standout features of Jupyter4NFDI is the flexibility it offers users to install their own extensions. This allows users to fully customize their environment according to their specific needs, rather than being limited to the pre-installed tools. With just three easy steps, users can add any extension that fits their workflow. The following example shows the installation of the JupyterView Extension.
-
-> The workflow outlined above has been tested specifically with [prebuilt extension](https://jupyterlab.readthedocs.io/en/latest/user/extensions.html#installing-extensions). Extensions that do not follow this standard might require extra steps for installation. For best results, request that the extension provider updates their software.
-
-<h3>1. <strong>Install python package</strong></h3>
-```
-source /tmp/custom/load_jupyter_version.sh # This loads the jupyter environment
-pip install --user jupyterview # or the extension you would like to install
-```
-You can check the success with these commands:  
-```
-source /tmp/custom/load_jupyter_version.sh # This loads the jupyter environment
-jupyter labextension list
-```
-> You will find the installed extension in this list. The extension might be listed with the hint "enabled X" instead of "enabled OK", that should be an issue while using the extension.
-<h3>2. <strong>Stop JupyterLab</strong></h3>
-Browse to the [home](https://hub.nfdi-jupyter.de/hub/home) page and Stop your running JupyterLab.
-<div style="text-align: center;">
-  <img src="../../../images/stop_jsccloud_4.2.png" alt="Kernels" style="width: 70%;">
-</div>
-<h3>3. <strong>Start JupyterLab</strong></h3>
-Wait until the JupyterLab is fully stopped. Then start it again.
-<div style="text-align: center;">
-  <img src="../../../images/start_jsccloud_4.2.png" alt="Kernels" style="width: 70%;">
-</div>
-You should now be able to use the installed extension. 
-If something's not working as expected, you may find additional information in the JupyterLab logs at `/tmp/custom/logs/stdout`.
-<div style="text-align: center;">
-  <img src="../../../images/jupyterview.png" alt="Kernels" style="width: 70%;">
-</div>
-
-## Uninstall your own Extensions
-To remove the previously installed extension, you have to set `PYTHONNOUSERSITE` to `0`. Otherwise pip will not look into the locally installed packages. 
-```
-source /tmp/custom/load_jupyter_version.sh # This loads the jupyter environment
-PYTHONNOUSERSITE=0 pip uninstall jupyterview
-```
-After a restart of your JupyterLab, the extension will be fully removed.
 
 ## Proxies
 

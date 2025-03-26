@@ -2,15 +2,13 @@
 
 Jupyter4NFDI offers **Repo2Docker ( Binder )**, which facilitates building Docker images directly from GitHub, GitLab, Zenodo or other sources. This capability allows users to easily set up environments that replicate their local development setups or share projects with others. Combined with the **[Direct Links](#direct-links)** or the **[share](../../misc.md#share-button)** Button, it allows you easily to create FAIR digital objects.
 
-> This service is currently in a beta stadium. We will continue working on it to bring more features and improvements.
-
 ## Direct Links
 
 Jupyter4NFDI enables you to create links that automatically start a JupyterLab instance using the provided parameters.  
-For example: [https://hub.nfdi-jupyter.de/r2d/gh/binder-examples/requirements](https://hub.nfdi-jupyter.de/r2d/gh/binder-examples/requirements){:target="_blank"}.  
+For example: [https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD](https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD){:target="_blank"}.  
 
 The general structure for these direct links is:  
-**`https://hub.nfdi-jupyter.de/r2d/_repotype_/_repoowner_/_reponame_/_ref_`**
+**`https://hub.nfdi-jupyter.de/v2/_repotype_/_repoowner_/_reponame_/_ref_`**
 
 In case you would like to add a badge to your Repository or Documentation:  
 
@@ -19,11 +17,11 @@ In case you would like to add a badge to your Repository or Documentation:
 </div>
 ```
 Markdown:
-[![NFDI](https://nfdi-jupyter.de/images/nfdi_badge.svg)](https://hub.nfdi-jupyter.de/r2d/gh/_repoowner_/_repotype_)
+[![NFDI](https://nfdi-jupyter.de/images/nfdi_badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_)
 
 RST:
 .. image:: https://nfdi-jupyter.de/images/nfdi_badge.svg
- :target: https://hub.nfdi-jupyter.de/r2d/gh/_repoowner_/_repotype_
+ :target: https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_
 ```  
   
 <div>
@@ -31,22 +29,22 @@ RST:
 </div>
 ```
 Markdown:
-[![Jupyter4NFDI](https://nfdi-jupyter.de/images/jupyter4nfdi_badge.svg)](https://hub.nfdi-jupyter.de/r2d/gh/_repoowner_/_repotype_)
+[![Jupyter4NFDI](https://nfdi-jupyter.de/images/jupyter4nfdi_badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/HEAD)
 
 
 RST:
 .. image:: https://nfdi-jupyter.de/images/jupyter4nfdi_badge.svg
- :target: https://hub.nfdi-jupyter.de/r2d/gh/_repoowner_/_repotype_
+ :target: https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/HEAD
 ```
 
 ### Parameters in the Link
 
 | Parameter    | Description                                                                 |
 |--------------|-----------------------------------------------------------------------------|
-| `_repotype_` | Specifies the type of repository (currently, only `gh` is supported).      |
+| `_repotype_` | Specifies the type of repository.                                            |
 | `_repoowner_`| Identifies the owner of the repository (e.g., an organization or username). |
 | `_reponame_` | The name of the repository containing the JupyterLab resources.            |
-| `_ref_`      | *(Optional)* The branch, tag, or commit hash to use in the repository (e.g., `main` or `requirements`). Default: `HEAD`. |
+| `_ref_`      | The branch, tag, or commit hash to use in the repository (e.g. `HEAD`, `main` or `requirements`). |
 
 ### Query Arguments in the Link
 
@@ -60,7 +58,7 @@ The link also supports several **optional** query arguments to unlock additional
 | `dataDir`    | Mounts the user's persistent storage on the selected [system](../../../features.md#1-systems-available) into the running session. **Important:** The path must be URL-encoded. For example, `/home/jovyan/work` should be written as `%2Fhome%2Fjovyan%2Fwork`. |
 | `flavor`     | Defines a specific flavor for the session. The availability of flavors depends on the selected system. If unsure, consult technical support. |
   
-Example: [https://hub.nfdi-jupyter.de/r2d/gh/binder-examples/requirements?system=JSC-Cloud&dataDir=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/r2d/gh/binder-examples/requirements?system=JSC-Cloud&dataDir=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}
+Example: [https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD?system=JSC-Cloud&dataDir=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD?system=JSC-Cloud&dataDir=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}
 
 
 ### Comparison with MyBinder
@@ -72,7 +70,7 @@ Unlike MyBinder, the data persists even after closing the browser window or revi
 ### Empowering Workshop Instructors
 
 Workshop instructors can prepare their content on GitHub, and participants can easily access it by following a link like:  
-[https://hub.nfdi-jupyter.de/r2d/gh/_repoowner_/_repo_?dataDir=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/r2d/gh/_repoowner_/_repo_?dataDir=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}.
+[https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repo_/HEAD?dataDir=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repo_/HEAD?dataDir=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}.
 
 
 With the Direct Link feature, workshop instructors gain the ability to:  
