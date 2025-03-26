@@ -38,6 +38,8 @@ You can select them by navigating to the **Kernels and Extensions** tab on the l
   
 > Since JupyterLab 4.3 uses software loaded via lmod, one cannot simply install a kernel without loading these modules first. Please follow the steps in the these guides to create your own kernel.  
 
+> Having trouble setting up kernels? Check the logs at `/tmp/custom/logs/stdout` in your JupyterLab.
+
 - [Create kernel with virtualenv](kernels_venv.ipynb)
 
 
