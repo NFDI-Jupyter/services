@@ -1,0 +1,36 @@
+title: NOMAD Remote Tools Hub
+provider: FAIRmat
+service_url: https://nomad-lab.eu/prod/v1/gui/analyze/north
+support: support@nomad-lab.eu
+documentation_url: https://nomad-lab.eu/prod/v1/staging/docs/howto/manage/north.html
+target_group_open_for: Users of NOMAD
+restricted: false
+login_process: Login via NOMAD account
+features:
+  version: JupyterHub 4.0.2
+  programming_languages: ["Python"]
+  install: true
+  shared_folder: true
+  persistent_storage: true
+  misc: 
+    - access to uploaded NOMAD data
+technicals:
+  platform: Openstack
+  deployment: kubernetes
+  hardware_location: MPCDF, Germany, Europe  
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  max_cpu: 24
+  total_cpu: 72
+  burst_total_cpu: 72
+  max_cpu_time: 24 h
+  max_memory: 1 GB
+  max_gpu: 0
+  max_disk: 512 GB
+  max_persistent_disk: 10 TB
+  total_memory: 1536 GB
+  burst_total_memory: 1536 GB
+  total_disk: 100 TB
+  burst_total_disk: 100 TB
+
