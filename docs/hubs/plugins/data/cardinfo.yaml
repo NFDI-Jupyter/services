@@ -1,63 +1,3 @@
-- title: SCC Jupyterhub
-  content: |
-    Provider: *GWDG*
-    <p class="nt-card-text">Target Group: Users with a full GWDG account (including people working in partner projects).</p>
-
-    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/gwdg_hpc.md)
-
-    [:material-lock: Login](https://jupyter-hpc.gwdg.de){.md-button .md-button--primary}</div>
-  image: plugins/assets/default-logo.png
-  icon: ":octicons-arrow-right-24:"
-- title: Jupyter4NFDI
-  content: |
-    Provider: *Juelich Supercomputing Centre*
-    <p class="nt-card-text">Target Group: Users within NFDI</p>
-
-    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/jupyter4nfdi.md)
-
-    [:material-lock: Login](https://hub.nfdi-jupyter.de){.md-button .md-button--primary}</div>
-  image: plugins/assets/default-logo.png
-  icon: ":octicons-arrow-right-24:"
-- title: RWTH HPC JupyterHub
-  content: |
-    Provider: *ITC RWTH Aachen University*
-    <p class="nt-card-text">Target Group: Researchers, RWTH Students/Employees/Guests, Juelich Members, Users sponsored by other Users, Users upon project application</p>
-
-    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/RWTH-NFDI-Jupyter-Service.md)
-
-    [:material-lock: Login](#){.md-button--disabled}</div>
-  image: plugins/assets/default-logo.png
-  icon: ":octicons-arrow-right-24:"
-- title: Interactive Tools of European Galaxy Server
-  content: |
-    Provider: *University of Freiburg*
-    <p class="nt-card-text">Target Group: Open for everyone</p>
-
-    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/usegalaxy.eu.md)
-
-    [:material-lock-open-variant: Login](https://live.usegalaxy.eu){.md-button .md-button--primary}</div>
-  image: plugins/assets/usegalaxy.eu.png
-  icon: ":octicons-arrow-right-24:"
-- title: University of Münster JupyterHub
-  content: |
-    Provider: *University of Münster*
-    <p class="nt-card-text">Target Group: Students and employees of University of Münster, members of PUNCH4NFDI (soon)</p>
-
-    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/uni-muenster.md)
-
-    [:material-lock: Login](https://jupyterhub.uni-muenster.de){.md-button .md-button--primary}</div>
-  image: plugins/assets/default-logo.png
-  icon: ":octicons-arrow-right-24:"
-- title: NFDI4Ing JupyterHub
-  content: |
-    Provider: *University of Stuttgart*
-    <p class="nt-card-text">Target Group: Researchers in Engineering</p>
-
-    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/nfdi4ing.md)
-
-    [:material-lock: Login](https://jupyter.nfdi4ing.de){.md-button .md-button--primary}</div>
-  image: plugins/assets/default-logo.png
-  icon: ":octicons-arrow-right-24:"
 - title: GESIS Notebooks
   content: |
     Provider: *GESIS – Leibniz Institute for the Social Sciences*
@@ -68,32 +8,12 @@
     [:material-lock-open-variant: Login](http://notebooks.gesis.org){.md-button .md-button--primary}</div>
   image: plugins/assets/GESIS-Notebooks.png
   icon: ":octicons-arrow-right-24:"
-- title: HoreKa Jupyterhub
+- title: RWTH HPC JupyterHub
   content: |
-    Provider: *Karlsruhe Institute of Technology*
-    <p class="nt-card-text">Target Group: Researchers, Users upon project application, Helmholtz users</p>
+    Provider: *ITC RWTH Aachen University*
+    <p class="nt-card-text">Target Group: Researchers, RWTH Students/Employees/Guests, Juelich Members, Users sponsored by other Users, Users upon project application</p>
 
-    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/kit-horeka.md)
-
-    [:material-lock: Login](https://hk-jupyter.scc.kit.edu){.md-button .md-button--primary}</div>
-  image: plugins/assets/default-logo.png
-  icon: ":octicons-arrow-right-24:"
-- title: Webbasiertes Data Science und Machine Learning mit Jupyter
-  content: |
-    Provider: *University of Leipzig*
-    <p class="nt-card-text">Target Group: Students and employees of University of Leipzig</p>
-
-    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/uni-leipzig.md)
-
-    [:material-lock: Login](#){.md-button--disabled}</div>
-  image: plugins/assets/default-logo.png
-  icon: ":octicons-arrow-right-24:"
-- title: PC² JupyterHub
-  content: |
-    Provider: *Paderborn Center for Parallel Computing, University of Paderborn*
-    <p class="nt-card-text">Target Group: All users of a computing time project at PC²</p>
-
-    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/pc2-upb.md)
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/RWTH-NFDI-Jupyter-Service.md)
 
     [:material-lock: Login](#){.md-button--disabled}</div>
   image: plugins/assets/default-logo.png
@@ -108,14 +28,14 @@
     [:material-lock: Login](https://jupyter-cloud.gwdg.de){.md-button .md-button--primary}</div>
   image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
-- title: MPCDF JupyterHub
+- title: SCC Jupyterhub
   content: |
-    Provider: *Max Planck Computing and Data Facility*
-    <p class="nt-card-text">Target Group: Researchers of the Max Planck Society</p>
+    Provider: *GWDG*
+    <p class="nt-card-text">Target Group: Users with a full GWDG account (including people working in partner projects).</p>
 
-    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/mpcdf.md)
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/gwdg_hpc.md)
 
-    [:material-lock: Login](https://notebooks.mpcdf.mpg.de){.md-button .md-button--primary}</div>
+    [:material-lock: Login](https://jupyter-hpc.gwdg.de){.md-button .md-button--primary}</div>
   image: plugins/assets/default-logo.png
   icon: ":octicons-arrow-right-24:"
 - title: Jupyter-JSC
@@ -127,4 +47,84 @@
 
     [:material-lock: Login](https://jupyter.jsc.fz-juelich.de){.md-button .md-button--primary}</div>
   image: plugins/assets/jupyter-jsc.fz-juelich.de.png
+  icon: ":octicons-arrow-right-24:"
+- title: Jupyter4NFDI
+  content: |
+    Provider: *Juelich Supercomputing Centre*
+    <p class="nt-card-text">Target Group: Users within NFDI</p>
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/jupyter4nfdi.md)
+
+    [:material-lock: Login](https://hub.nfdi-jupyter.de){.md-button .md-button--primary}</div>
+  image: plugins/assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: HoreKa Jupyterhub
+  content: |
+    Provider: *Karlsruhe Institute of Technology*
+    <p class="nt-card-text">Target Group: Researchers, Users upon project application, Helmholtz users</p>
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/kit-horeka.md)
+
+    [:material-lock: Login](https://hk-jupyter.scc.kit.edu){.md-button .md-button--primary}</div>
+  image: plugins/assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: MPCDF JupyterHub
+  content: |
+    Provider: *Max Planck Computing and Data Facility*
+    <p class="nt-card-text">Target Group: Researchers of the Max Planck Society</p>
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/mpcdf.md)
+
+    [:material-lock: Login](https://notebooks.mpcdf.mpg.de){.md-button .md-button--primary}</div>
+  image: plugins/assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: NFDI4Ing JupyterHub
+  content: |
+    Provider: *University of Stuttgart*
+    <p class="nt-card-text">Target Group: Researchers in Engineering</p>
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/nfdi4ing.md)
+
+    [:material-lock: Login](https://jupyter.nfdi4ing.de){.md-button .md-button--primary}</div>
+  image: plugins/assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: PC² JupyterHub
+  content: |
+    Provider: *Paderborn Center for Parallel Computing, University of Paderborn*
+    <p class="nt-card-text">Target Group: All users of a computing time project at PC²</p>
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/pc2-upb.md)
+
+    [:material-lock: Login](#){.md-button--disabled}</div>
+  image: plugins/assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: Webbasiertes Data Science und Machine Learning mit Jupyter
+  content: |
+    Provider: *University of Leipzig*
+    <p class="nt-card-text">Target Group: Students and employees of University of Leipzig</p>
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/uni-leipzig.md)
+
+    [:material-lock: Login](#){.md-button--disabled}</div>
+  image: plugins/assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: University of Münster JupyterHub
+  content: |
+    Provider: *University of Münster*
+    <p class="nt-card-text">Target Group: Students and employees of University of Münster, members of PUNCH4NFDI (soon)</p>
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/uni-muenster.md)
+
+    [:material-lock: Login](https://jupyterhub.uni-muenster.de){.md-button .md-button--primary}</div>
+  image: plugins/assets/default-logo.png
+  icon: ":octicons-arrow-right-24:"
+- title: Interactive Tools of European Galaxy Server
+  content: |
+    Provider: *University of Freiburg*
+    <p class="nt-card-text">Target Group: Open for everyone</p>
+
+    <div class="nfdi-card-link">[:octicons-arrow-right-24: Service Details](details/usegalaxy.eu.md)
+
+    [:material-lock-open-variant: Login](https://live.usegalaxy.eu){.md-button .md-button--primary}</div>
+  image: plugins/assets/usegalaxy.eu.png
   icon: ":octicons-arrow-right-24:"

@@ -26,7 +26,7 @@ In Jupyter4NFDI you can share your current configuration with your colleagues. I
 1. Follow the link.
 > If you're not already authenticated, you have to log in first. For more information check [this section](../authentication.md). Afterwards you'll be forwarded to the desired destination.
 
-2. You will see the shared configuration. If necessary, you can edit before starting it. Click on Start to start the service.
+2. You will see the shared configuration. Click on Start to start the service.
 
 <div style="text-align: center;">
   <img src="../../images/sharebutton_3.png" alt="Use Share Link" style="width: 90%;">
