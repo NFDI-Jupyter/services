@@ -1,7 +1,7 @@
 
 # Workshops
 
-There are no special requirements to use Jupyter4NFDI for a workshop, you can simply use the platform as you normally would. Participants gain access by using one of the available [authentication methods](authentication.md). In this section, we cover some best practices for workshops.
+There are no special requirements to use Jupyter4NFDI for a workshop, you can simply use the platform as you normally would. Participants gain access by using one of the available [authentication methods](authentication.md){:target="_blank"}. In this section, we cover some best practices for workshops.
 
 > If you plan to host a workshop, we kindly ask you to let us know in advance ( [Contact](support.md){:target="_blank"} ). This helps us take your event into account when scheduling maintenance and ensures a smooth experience for all participants.
 
