@@ -183,176 +183,156 @@ c.JupyterHubOutpost.ssh_recreate_at_start = restart_tunnels
 > JupyterHub Outpost will use the stored JupyterHub API token to recreate the port-forwarding process. If the API token is no longer valid, this will fail. The single-user server would then be unreachable and must be restarted by the user.
 
 
-## Flavors - manage resource access for multiple JupyterHubs
-By default, all connected JupyterHubs may use all available resources. It's possible to configure "flavors" for each connected JupyterHub, offering only a part of the available resources.
-  
-For this configuration three attributes are crucial:  
-  - [flavors](configuration.md#flavors)  
-  - [flavors_undefined_max](configuration.md#undefined-max)  
-  - [flavors_update_token](configuration.md#update-tokens)  
+## Flavors
 
-### Flavors
-Configure different flavors, which can be used in Spawner configuration. 
-```python
-async def flavors(jupyterhub_name):
-    if jupyterhub_name == "privileged":
-        return {
-            "typea": {
-                "max": -1,
-                "weight": 10,
-                "display_name": "2GB RAM, 1VCPU, 5 days",
-                "description": "JupyterLab will run for max 5 days with 2GB RAM and 1VCPU.",
-                "runtime": {"days": 5},
-            },
-        }
-    else:
-        return {
-            "typeb": {
-                "max": 10,
-                "weight": 9,
-                "display_name": "4GB RAM, 1VCPUs, 2 hours",
-                "description": "JupyterLab will run for max 2 hours with 4GB RAM and 1VCPUs.",
-                "runtime": {"hours": 2},
-            },
-        }
-c.JupyterHubOutpost.flavors = flavors
+### Overview
+
+**Flavors** define preconfigured resource templates for User sessions. They specify **runtime limits** and user constraints, helping you manage system load and provide differentiated access based on user groups or hub configurations.
+
+Flavors are mandatory and part of the default configuration of the Outpost. All users will have access to the default flavors unless specified otherwise.
+
+---
+
+### Basic Flavor Structure
+
+A flavor configuration typically looks like this:
+
+```yaml
+flavors:
+  flavors:
+    default:
+      max: 20
+      maxPerUser: 3
+      weight: 11
+      display_name: "Default"
+      description: "Service will run with normal resources for max 5 days"
+      runtime:
+        hours: 120
+      resources:
+        cpu_guarantee: 0.1
+        cpu_limit: 1
+        mem_guarantee: "256M"
+        mem_limit: "2048M"
 ```
 
-The connected JupyterHub "privileged" can start infinite jupyter servers. The servers will be stopped after 5 days by the JupyterHub Outpost.  
-Any other connected JupyterHub can start up to 10 jupyter servers (all users together for each JupyterHub, not combined for all JupyterHubs).  
-The according RAM / VCPUs restrictions are configured later on in the config file at `c.KubeSpawner.profile_list` or `c.KubeSpawner.[mem_guarantee|mem_limit|cpu_guarantee|cpu_limit]`.  
-JupyterHub OutpostSpawner has to send the chosen flavor in `user_options.flavor` when starting a notebook server.
+> The flavors `default` and `minimal` are always active. Set them to `{}` to deactivate them. Or add a hub specific configuration (see below) and don't include `default` and `minimal` in the supported flavors for this hub.
 
-### User specific flavors
-JupyterHub Outpost supports user-specific flavors, which allows administrators to assign different resource configurations to individual users. This feature is especially useful in environments where users have varying levels of resource needs or access rights. With user-specific flavors, you can:
+> Resources must be used by your Spawner Configuration. 
 
-- Block access for specific users
-- Prioritize certain users with more resources
-- Allocate minimal resources for external or guest users
-- Tailor resource allocation for different user groups
+#### Parameters
 
-#### How It Works
-The concept of "flavors" allows for the customization of resources based on user identity. By configuring these flavors, administrators can control the resource allocation and user access in a flexible manner. 
+| Key               | Description                                                                           |
+|-------------------|---------------------------------------------------------------------------------------|
+| `display_name`    | User-facing name of the flavor                                                        |
+| `description`     | Description of resources or limitations                                               |
+| `runtime`         | Maximum lifetime of a session using this flavor. Supported keys: days, hours, minutes |
+| `resources`       | Can be used to define allowed resources                                               |
+| `max`             | Maximum total number of concurrent sessions using this flavor                         |
+| `maxPerUser`      | Maximum number of sessions per user using this flavor                                 |
+| `weight`          | Controls the ordering in the flavor list; higher weights appear first                 |
 
-Flavors are typically defined by setting parameters such as CPU, memory, disk space, and other configurations needed for running the user's server. The configuration is linked to each user, and the appropriate settings are applied when they spawn a jupyter server.
+---
+
+### Per-User Flavor Control
+
+You can assign flavors to users based on their **authentication attributes** (like username, email). This allows differentiated access control.
+Ask the JupyterHub authenticator for the attributes, or set the log level to trace and check the Outpost logs.
+
+#### Example 1: Allow minimal flavor for non-company users
+
+```yaml
+users:
+  publicUsers:
+    negate_authentication: true 
+    authentication:
+      username: ".*@mycompany.org"
+    flavors: ["minimal"]
+    weight: 10
+```
+
+- All users **not ending with `@mycompany.org`** are only allowed to use the `minimal` flavor.
+
+#### Example 2: Block all Gmail users
+
+```yaml
+users:
+  googleUsers:
+    authentication:
+      username: ".*@g(oogle)*mail.com"
+    forbidden: true
+    weight: 20
+```
+
+- Users with Gmail or Google Mail addresses will be denied access.
+
+> Each field in `authentication` (like `username`, `email`, etc.) supports multiple match types:
+> 
+> - A **regular expression** (e.g., `"^user[0-9]+@example.com$"`)
+> - A **glob-style pattern** (e.g., `"*@example.com"`)
+> - A **literal value** (e.g., `"admin@example.com"`)
+> - Or a **list** of allowed literal values.
+>
+> The system will try to match in this order: **Regex → Glob → Exact match**.
+> 
+> This gives you flexibility in how users are grouped and access is granted.
+
+
+---
+
+### Per-Hub Flavor Control
+
+In environments with **multiple JupyterHub instances**, you can configure flavors per hub using the `hubs` section:
+
+```yaml
+hubs:
+  minimalhub:
+    weight: 15
+    jupyterhub_name:
+      - hubmini
+    flavors:
+      - minimal
+
+  normalhubs:
+    weight: 10
+    jupyterhub_name:
+      - huba
+      - hubb
+    flavors:
+      - default
+```
+
+- `hubmini` will only offer the `minimal` flavor.
+- `huba` and `hubb` will offer the `default` flavor.
+
+> The `weight` controls the priority if multiple groups match — the one with the **highest weight** takes precedence.
+
+---
+
+### Default Behavior
+
+If no user or hub restrictions are configured:
+
+- All defined flavors will be available to all users.
+- This behavior can be overridden by defining `users` or `hubs`.
+
+---
+
+### Recommendations
+
+- Start with a base set of flavors (`minimal`, `default`) and refine access over time.
+- Use `negate_authentication` for simple allow/deny matching logic based on patterns.
+- Always test your regex for `username` carefully to avoid unintentional matches.
+- Use `weight` wisely to control precedence in overlapping rules.
 
 #### Use Cases
 - **Blocked Users**: Administrators can configure flavors for specific users that deny access, effectively blocking them from launching any jupyter servers.
 - **Prioritized Users**: For power users, administrators can assign more resources (e.g., higher CPU, additional memory) to ensure they have the performance needed for demanding tasks.
 - **External Users**: For guest or external users, administrators may provide a default, minimal resource allocation to prevent overuse of the system’s resources.
   
-#### Configuration
-To assign a flavor to a user, you will need to update the JupyterHub Outpost configuration to define and link flavors to specific user identities.
-
-Example configuration snippet:
-```python
-resources = {
-    "s1": {
-        "node_selector": {"smallnode": "true"},
-        "cpu_guarantee": 0.1,
-        "cpu_limit": 1,
-        "mem_guarantee": "256M",
-        "mem_limit": "2048M"
-    },
-    "l1": {
-        "node_selector": {"bignode": "true"},
-        "cpu_guarantee": 1,
-        "cpu_limit": 4,
-        "mem_guarantee": "2048M",
-        "mem_limit": "65536M"
-    }
-}
-awesome_users = {
-    "l1": {
-        "max": 50,
-        "weight": 10,
-        "display_name": "64GB RAM, 4VCPUs, 12 hours",
-        "description": "JupyterLab will run for max 12 hours with 64GB RAM and 4VCPUs.",
-        "runtime": {"hours": 12},
-    },
-    "s1": {
-        "max": 20,
-        "weight": 11,
-        "display_name": "2GB RAM, 1VCPU, 4 hours",
-        "description": "JupyterLab will run for max 4 hours with 2GB RAM and 1VCPU.",
-        "runtime": {"hours": 4},
-    }
-}
-default_users = {
-    "s1": {
-        "max": 10,
-        "weight": 11,
-        "display_name": "2GB RAM, 1VCPU, 4 hours",
-        "description": "JupyterLab will run for max 4 hours with 2GB RAM and 1VCPU.",
-        "runtime": {"hours": 4},
-    }
-}
-
-async def userflavors(outpost, jupyterhub_name, auth_dict):
-    if auth_dict.get("username", "").endswith("mycomp.org"):
-        return awesome_users
-    else:
-        try:
-            with open("/mnt/blocked_users.txt", "r") as f:
-                blocked_users = f.read()
-            if auth_dict.get("username", "") in blocked_users:
-                return False
-        except:
-            outpost.log.exception("Could not load blocklist")
-
-        return default_users
-
-c.JupyterHubOutpost.user_flavors = userflavors
-
-
-from kubespawner import KubeSpawner
-c.JupyterHubOutpost.spawner_class = KubeSpawner
-async def profile_list(spawner):
-    jupyterhub_name = spawner.jupyterhub_name
-    spawner.log.info(f"{spawner._log_name} - Received these user_options from {jupyterhub_name}-JupyterHub: {spawner.user_options}")
-    slug = spawner.user_options.get("profile", "default")
-    flavor = spawner.user_options.get("flavor", "s1")
-    default_image = "jupyter/minimal-notebook:notebook-7.0.3"
-
-    return [
-      {
-          "display_name": slug,
-          "slug": slug,
-          "kubespawner_override": {
-              "image": default_image,
-              "node_selector": resources[flavor]["node_selector"],
-              "cpu_guarantee": resources[flavor]["cpu_guarantee"],
-              "cpu_limit": resources[flavor]["cpu_limit"],
-              "mem_guarantee": resources[flavor]["mem_guarantee"],
-              "mem_limit": resources[flavor]["mem_limit"]
-          }
-      }
-    ]
-
-c.KubeSpawner.profile_list = profile_list
-
-
-```
-
-In this example you will give users of your company the full extend of your resources, while other users get less resources.  
-
- - **Pro-Tipp** If you manage the flavors and resources in a ConfigMap and mount it in your Outpost, you can update flavors and resources without restarting the Outpost.
-
-> All users will have a shared counter for servers with the s1 flavor. If 10 Jupyter servers of flavor s1 are running, default users won't be able to start a Jupyter server. This allows you to reserve 10 Jupyter servers of flavor s1 to your employees, workshops, or other use cases.
-
 #### Benefits
  - Resource Management: Fine-grained control over resource allocation ensures efficient use of system resources.
  - User Control: Administrators can easily adjust resource access based on user needs or status (e.g., external user vs internal user).
  - Scalability: As your user base grows, you can easily apply different flavors to new users without major changes to the overall configuration.
-
-### Undefined Max
-If JupyterHub OutpostSpawner does not send a flavor in user_options `c.JupyterHubOutpost.flavors_undefined_max` will be used to limit the available resources. This value is also used, if the given flavor is not part of the previously defined `flavors` dict. Default is `-1`, which allows infinite notebook servers for all unknown or unconfigured flavored notebook servers.
-
-```python
-c.JupyterHubOutpost.flavors_undefined_max = 0
-```
-
-This example does not allow any jupyter server with a flavor, that's not defined in `c.JupyterHubOutpost.flavors`. Enables full control of the available resources.
 
 ### Update Tokens
 The JupyterHub OutpostSpawner offers an APIEndpoint, which receives or offers the current Flavors of all connected JupyterHub Outposts. With this function the Outpost will inform the connected JupyterHubs at each start/stop of a notebook server, about the current flavor situation. The corresponding URL will be given by the OutpostSpawner.
