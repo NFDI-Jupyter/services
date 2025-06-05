@@ -122,6 +122,7 @@ nav:
     - JupyterLab 4.2: users/jupyterlab/4.2/index.md
     - Custom Docker Images: users/jupyterlab/customdockerimage/index.md
     - Repo2Docker ( Binder ): users/jupyterlab/repo2docker/index.md
+    - Mount external storage locations: users/storage.md
     - Useful Tips & Tricks: users/misc.md
   - For Workshops:
     - Overview: workshops.md
