@@ -65,4 +65,3 @@ We’re actively improving the DataMount extension—and your feedback helps us 
 **Please create an issue at our GitHub repository:**  
 [https://github.com/jsc-jupyter/jupyterlab-data-mount/issues](https://github.com/jsc-jupyter/jupyterlab-data-mount/issues)
 
-Whether it’s **Globus**, **SFTP**, **Azure Blob**, or something more exotic—let us know!
