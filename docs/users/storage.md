@@ -46,6 +46,7 @@ The **JupyterLab DataMount extension**, in combination with the [Share Button](m
 - A data steward sets up a shared WebDAV folder and gives researchers access via the Share Button.
 - A lab technician mounts an S3 bucket with experimental data and shares read-only access with collaborators in another institution.
 - A team leader creates a B2DROP mount for a shared project folder and distributes access to students—with zero configuration needed on their side.
+- Check out this example Repository: [https://github.com/kreuzert/DataMount-ShareButton-Example](https://github.com/kreuzert/DataMount-ShareButton-Example)
 
 ### Why It Matters
 
