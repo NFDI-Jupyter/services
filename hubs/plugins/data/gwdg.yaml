@@ -1,0 +1,37 @@
+title: Jupyter-Cloud
+provider: GWDG
+service_url: https://jupyter-cloud.gwdg.de
+support: support@gwdg.de
+health_api_url: 
+documentation_url: https://docs.gwdg.de/doku.php?id=en:services:application_services:jupyter:start
+target_group_open_for: Users having a full GWDG account (which can include people working in partner projects)
+restricted: true
+login_process: Login via Shibboleth (AcademicID - academiccloud.de)
+features:
+  version: JupyterLab 3.5 (via JupyterHub)
+  programming_languages: ["Python", "Julia", "R", "Bash"]
+  environments: []
+  extensions: ["git","plotly","matplotlib"]
+  proxy_apps: []
+  install: true
+  shared_folder: false
+  persistent_storage: true
+  misc: []
+technicals:
+  deployment: "Based on Jupyter Datascience Notebook image, extended with user-requested data science tools"
+  misc: []
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  default_cpu: 1
+  max_cpu: 4
+  default_cpu_time: 24 h
+  max_cpu_time: 24 h
+  default_memory: 15 GB
+  max_memory: 15 GB
+  default_gpu: 0
+  max_gpu: 0
+  default_disk: 10 GB
+  max_disk: 10 GB
+  default_persistent_disk: 10 GB
+  max_persistent_disk: 10 GB
