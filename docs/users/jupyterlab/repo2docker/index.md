@@ -17,11 +17,11 @@ In case you would like to add a badge to your Repository or Documentation:
 </div>
 ```
 Markdown:
-[![NFDI](https://nfdi-jupyter.de/images/nfdi_badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_)
+[![NFDI](https://nfdi-jupyter.de/images/nfdi_badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/_ref_)
 
 RST:
 .. image:: https://nfdi-jupyter.de/images/nfdi_badge.svg
- :target: https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_
+ :target: https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/_ref_
 ```  
   
 <div>
@@ -29,12 +29,12 @@ RST:
 </div>
 ```
 Markdown:
-[![Jupyter4NFDI](https://nfdi-jupyter.de/images/jupyter4nfdi_badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/HEAD)
+[![Jupyter4NFDI](https://nfdi-jupyter.de/images/jupyter4nfdi_badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/_ref_)
 
 
 RST:
 .. image:: https://nfdi-jupyter.de/images/jupyter4nfdi_badge.svg
- :target: https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/HEAD
+ :target: https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/_ref_
 ```
 
 ### Parameters in the Link
