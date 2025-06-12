@@ -25,6 +25,8 @@
               </div>
             </div>
           </a>
+          {%else %}
+          <div style="visibility: hidden;">&nbsp;</div>
         {% endif %}
       <div>
         <div class="footer-copyright">
@@ -90,6 +92,8 @@
             {% include ".icons/" ~ icon ~ ".svg" %}
           </div>
         </a>
+        {%else %}
+        <div style="visibility: hidden;">&nbsp;</div>
       {% endif %}
     </div>
   </footer>
