@@ -1,4 +1,4 @@
-site_name: Jupyter4NFDI
+site_name: ""
 site_description: Jupyter4NFDI project overview
 site_author: WG RSE, NFDI Section Common Infrastructures, Jupyter4NFDI
 site_url: "https://NFDI-Jupyter.github.io/services"
@@ -18,12 +18,12 @@ theme:
     - content.code.annotation
     - content.code.copy
   language: en
-  logo: images/base4nfdi_logo.png
   font:
     text: Fira Sans
     code: Roboto Mono
     icon: 'mdi'
   favicon: images/nfdi_rgb_Wortmarke.png
+  logo: ./images/Jupyter4NFDI-top.png
   custom_dir: docs/custom
   #palette:
  #   - scheme: fzj
@@ -31,15 +31,6 @@ theme:
  #     accent: purple
   palette:
     - scheme: default
-      toggle:
-        icon: material/lightbulb
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/lightbulb-outline
-        name: Switch to light mode
-
-
 plugins:
   - mkdocs-jupyter
   - social
