@@ -7,6 +7,7 @@ You can use one of the many [jupyter images](https://jupyter-docker-stacks.readt
 
 **Custom Docker Images** are available on these systems:
 
+- **deNBI-Cloud**
 - **JSC-Cloud**
 
 ## Options

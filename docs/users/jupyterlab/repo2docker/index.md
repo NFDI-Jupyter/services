@@ -58,7 +58,7 @@ The link also supports several **optional** query arguments to unlock additional
 | `localstoragepath`    | Mounts the user's persistent storage on the selected [system](../../../features.md#1-systems-available) into the running session. **Important:** The path must be URL-encoded. For example, `/home/jovyan/work` should be written as `%2Fhome%2Fjovyan%2Fwork`. |
 | `flavor`     | Defines a specific flavor for the session. The availability of flavors depends on the selected system. If unsure, consult technical support. |
   
-Example: [https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD?system=JSC-Cloud&localstoragepath=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD?system=JSC-Cloud&localstoragepath=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}
+Example: [https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD?localstoragepath=%2Fhome%2Fjovyan%2Fwork](https://hub.nfdi-jupyter.de/v2/gh/binder-examples/requirements/HEAD?localstoragepath=%2Fhome%2Fjovyan%2Fwork){:target="_blank"}
 
 
 ### Comparison with MyBinder
@@ -99,6 +99,7 @@ These features will empower users to work more efficiently and tackle complex da
 
 **Repo2Docker ( Binder )** is available on these systems:
 
+- **deNBI-Cloud**
 - **JSC-Cloud**
 
 ## Options

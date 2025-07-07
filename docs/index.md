@@ -57,8 +57,8 @@ Jupyter4NFDI is ideal for:
 To begin using Jupyter4NFDI, just follow these simple steps:
 
 1. **Visit the website**: Go to [hub.nfdi-jupyter.de](https://hub.nfdi-jupyter.de).
-2. **Login**: Authenticate via Helmholtz AAI. More information [here](authentication.md).
-3. **Select a system**: Currently only JSC-Cloud available. More to come!
+2. **Login**: Authenticate via Helmholtz ID. More information [here](authentication.md).
+3. **Select a system**: Choose between multiple Cloud resources.
 4. **Start and have fun**: Launch your Jupyter environment and start working on your projects, whether they involve data science, machine learning, simulations, or training workshops.
 
 Enjoy the power of **cloud resources** right from your browser!
