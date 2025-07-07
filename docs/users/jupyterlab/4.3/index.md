@@ -1,10 +1,10 @@
-# JupyterLab 4.3
+# JupyterLab XL
 
 This is the current default version of JupyterLab on Jupyter4NFDI. In the next sections we will describe how you can modify it to fit your needs, and give a brief overview of the installed software.
 
 ## Systems Available
 
-**JupyterLab 4.3** is available on these systems:
+**JupyterLab XL** is available on these systems:
 
 - **JSC-Cloud**
 

@@ -109,8 +109,8 @@ nav:
     - 2-Factor authentication: 2fa.md
     - Available Resources and Tools: features.md
   - For Users:
-    - JupyterLab 4.3: users/jupyterlab/4.3/index.md
-    - JupyterLab 4.2: users/jupyterlab/4.2/index.md
+    - JupyterLab: users/jupyterlab/default/index.md
+    - JupyterLab XL: users/jupyterlab/4.3/index.md
     - Custom Docker Images: users/jupyterlab/customdockerimage/index.md
     - Repo2Docker ( Binder ): users/jupyterlab/repo2docker/index.md
     - Mount external storage locations: users/storage.md
@@ -131,6 +131,7 @@ nav:
 
 plugins:
   - search
+  - mkdocs-jupyter
 #  - awesome-pages
   - gen-files:
       scripts:
