@@ -31,18 +31,6 @@ theme:
  #     accent: purple
   palette:
     - scheme: default
-plugins:
-  - mkdocs-jupyter
-  - social
-  - search
-  - gen-files:
-      scripts:
-        - docs/plugins/gen_detail_pages.py
-  - macros:
-      include_dir: include
-  - mkdocs-simple-hooks:
-      hooks:
-        on_pre_build: "data.hooks:generate_cards"
 
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
