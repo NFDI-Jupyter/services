@@ -235,7 +235,7 @@ flavors:
 
 ### Per-User Flavor Control
 
-You can assign flavors to users based on their **authentication attributes** (like username, email). This allows differentiated access control.
+You can assign flavors to users based on their **authentication attributes** (like name, email). This allows differentiated access control.
 Ask the JupyterHub authenticator for the attributes, or set the log level to trace and check the Outpost logs.
 
 #### Example 1: Allow minimal flavor for non-company users
@@ -245,7 +245,7 @@ users:
   publicUsers:
     negate_authentication: true 
     authentication:
-      username: ".*@mycompany.org"
+      name: ".*@mycompany.org"
     flavors: ["minimal"]
     weight: 10
 ```
@@ -258,14 +258,14 @@ users:
 users:
   googleUsers:
     authentication:
-      username: ".*@g(oogle)*mail.com"
+      name: ".*g(oogle)*mail.com$"
     forbidden: true
     weight: 20
 ```
 
 - Users with Gmail or Google Mail addresses will be denied access.
 
-> Each field in `authentication` (like `username`, `email`, etc.) supports multiple match types:
+> Each field in `authentication` (like `name`, `email`, etc.) supports multiple match types:
 > 
 > - A **regular expression** (e.g., `"^user[0-9]+@example.com$"`)
 > - A **glob-style pattern** (e.g., `"*@example.com"`)
@@ -321,7 +321,7 @@ If no user or hub restrictions are configured:
 
 - Start with a base set of flavors (`minimal`, `default`) and refine access over time.
 - Use `negate_authentication` for simple allow/deny matching logic based on patterns.
-- Always test your regex for `username` carefully to avoid unintentional matches.
+- Always test your regex for `name` carefully to avoid unintentional matches.
 - Use `weight` wisely to control precedence in overlapping rules.
 
 #### Use Cases
