@@ -1,9 +1,7 @@
-# Useful Tips & Tricks
-
-## Share Button
+# Share Button
 In Jupyter4NFDI you can share your current configuration with your colleagues. In combination with the **CustomDockerImage** or **Repo2Docker (Binder)** services, it allows you to easily create FAIR digital objects.  
 
-### Create share link
+## Create share link
 
 <ol start="1">
   <li>Click on the share button in the bottom left corner of your configuration.</li>
@@ -22,7 +20,7 @@ In Jupyter4NFDI you can share your current configuration with your colleagues. I
 </div>
 
 
-### Use a share link
+## Use a share link
 1. Follow the link.
 > If you're not already authenticated, you have to log in first. For more information check [this section](../authentication.md). Afterwards you'll be forwarded to the desired destination.
 
@@ -31,8 +29,3 @@ In Jupyter4NFDI you can share your current configuration with your colleagues. I
 <div style="text-align: center;">
   <img src="../../images/sharebutton_3.png" alt="Use Share Link" style="width: 90%;">
 </div>
-
-
-## Markdown Tips & Tricks
-
-For more insights and examples, check out the notebook: [**Markdown Tips & Tricks Notebook**](others/Markdown_Tipps-and-Tricks.ipynb).
