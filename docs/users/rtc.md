@@ -18,5 +18,5 @@ Jupyter4NFDI makes it easy to collaborate live in your JupyterLab environment. W
 > ⚠️ **Be careful who you share the link with.** Only give access to trusted collaborators.
 
 <div style="text-align: center;">
-  <img src="../../images/rtcbutton_1.png" alt="Create RTC Link" style="width: 90%;">
+  <img src="../../images/rtc1.png" alt="Create RTC Link" style="width: 90%;">
 </div>
