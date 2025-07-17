@@ -5,7 +5,7 @@ Jupyter4NFDI makes it easy to collaborate live in your JupyterLab environment. W
 ## How it works
 
 1. **Start your JupyterLab** as usual.
-2. Go to the Jupyter4NFDI website and click on the **RTC button**.
+2. Go to the [Jupyter4NFDI website](https://hub.nfdi-jupyter.de/hub/home) and click on the **RTC button**.
 3. Copy the generated link and share it with your collaborators.
 4. They can use this link to join your running JupyterLab.
 
