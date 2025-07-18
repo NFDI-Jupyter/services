@@ -1,0 +1,52 @@
+title: NOMAD Remote Tools Hub hosted by FAIRmat
+provider: Max Planck Computing and Data Facility
+service_url: https://nomad-lab.eu/prod/v1/gui/analyze/north
+support: support@nomad-lab.eu
+health_api_url: 
+documentation_url: 
+target_group_open_for: 
+restricted: false
+login_process: Login with a NOMAD account (supports Google, ORCID, Helmholtz AAI)
+features:
+  version: Jupyterhub 4.1.6, JupyterLab 4.1.6, lab view
+  programming_languages: [Python, Julia, R]
+  environments: []
+  environments_info:
+  extensions: []
+  proxy_apps: []
+  install:
+  shared_folder: true
+  persistent_storage: true
+  misc: []
+technicals:
+  platform: Openstack
+  deployment: Kubernetes
+  deployment_url:
+  login_attributes: []
+  hardware_location: Garching, Germany
+  misc: []
+resources:
+  default_server_user:
+  max_server_user:
+  default_cpu:
+  max_cpu:
+  total_cpu:
+  burst_total_cpu:
+  default_cpu_time:
+  max_cpu_time:
+  default_memory:
+  max_memory:
+  total_memory:
+  burst_total_memory:
+  default_gpu:
+  max_gpu:
+  total_gpu:
+  burst_total_gpu:
+  default_disk:
+  max_disk:
+  default_persistent_disk:
+  max_persistent_disk:
+  total_disk:
+  burst_total_disk:
+usage:
+  average_daily_sessions:
