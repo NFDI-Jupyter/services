@@ -2,18 +2,18 @@ title: NOMAD Remote Tools Hub (NORTH)
 provider: FAIRmat
 service_url: https://nomad-lab.eu/prod/v1/gui/analyze/north
 support: support@nomad-lab.eu
-health_api_url:
-documentation_url: https://nomad-lab.eu/prod/v1/docs/howto/manage/north.html
+health_api_url: https://nomad-lab.eu/prod/v1/north/hub/api
+documentation_url:
 target_group_open_for: Users of NOMAD
 restricted: false
 login_process: Login with a NOMAD account (Google, ORCID via Helmholtz AAI)
 features:
-  version: JupyterLab 4.1.6 (via JupyterHub)
-  programming_languages: [Python]
-  environments: [Python environments, desktop applications]
+  version: 4.0.2; JupyterLab 4.0.9,
+  programming_languages: ["Python"]
+  environments: ["Python environments", "desktop applications"]
   environments_info: Each NORTH tool has its own environment(s)
   extensions: []
-  proxy_apps: [jupyter-remote-desktop-proxy]
+  proxy_apps: ["jupyter-remote-desktop-proxy"]
   install: false
   shared_folder: true
   persistent_storage: true
@@ -21,7 +21,7 @@ features:
 technicals:
   platform: Openstack at MPCDF (HPC-Cloud)
   deployment: Kubernetes
-  deployment_url: https://github.com/FAIRmat-NFDI/nomad-distro-dev
+  deployment_url: 
   login_attributes: []
   hardware_location: Garching, Germany
   misc: []
@@ -45,7 +45,7 @@ resources:
   default_disk:
   max_disk:
   default_persistent_disk:
-  max_persistent_disk: 32GB (per upload, up to 10 uploads)
+  max_persistent_disk: 32GB (per upload)
   total_disk:
   burst_total_disk:
 usage:
