@@ -1,19 +1,19 @@
-title: NOMAD Remote Tools Hub (NORTH)
+title: NOMAD Artificial-Intelligence Toolkit
 provider: FAIRmat
-service_url: https://nomad-lab.eu/prod/v1/gui/analyze/north
+service_url: https://nomad-lab.eu/prod/v1/gui/search/ai-toolkit
 support: support@nomad-lab.eu
 health_api_url:
-documentation_url: https://nomad-lab.eu/prod/v1/docs/howto/manage/north.html
+documentation_url: https://nomad-lab.eu/nomad-lab/ai-toolkit.html
 target_group_open_for: Users of NOMAD
 restricted: false
 login_process: Login with a NOMAD account (Google, ORCID via Helmholtz AAI)
 features:
   version: JupyterLab 4.1.6 (via JupyterHub)
-  programming_languages: [Python]
-  environments: [Python environments, desktop applications]
-  environments_info: Each NORTH tool has its own environment(s)
+  programming_languages: [Python, Julia]
+  environments: []
+  environments_info: Each AI Toolkit has its own environment
   extensions: []
-  proxy_apps: [jupyter-remote-desktop-proxy]
+  proxy_apps: []
   install: false
   shared_folder: true
   persistent_storage: true
