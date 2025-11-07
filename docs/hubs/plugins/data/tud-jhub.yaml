@@ -1,0 +1,47 @@
+title: TU Dresden JupyterHub
+provider: CiDS, Technical University of Dresden
+service_url: https://jupyterhub.hpc.tu-dresden.de/
+service_url_requirement: VPN or Campus Network
+support: hpc-support@tu-dresden.de
+health_api_url:
+documentation_url: https://doc.zih.tu-dresden.de/
+target_group_open_for: HPC TU Dresden users and NFDI consortia
+restricted: true
+login_process: Login via LDAP
+features:
+  version: JupyterHub 3.x, JupyterLab 4.0.12
+  programming_languages: ['Python', 'Julia', 'R', 'Bash']
+  environments: ['scipy', 'tensorflow', 'pytorch']
+  environments_info: https://doc.zih.tu-dresden.de/access/jupyterhub_custom_environments/
+  extensions: ['configurable-http-proxy', 'jupyter-resource-usage', 'nbgitpuller', 'jupyterlmod']
+  proxy_apps: ['MATLAB desktop', 'Rstudio', 'noVNC']
+  install: true (kernels only)
+  shared_folder: true
+  persistent_storage: true
+  misc: ['advanced form']
+technicals:
+  platform: docker
+  deployment: Python Virtual Environment
+  deployment_url: https://gitlab.hrz.tu-chemnitz.de/hpcsupport/jupyterhub
+  login_attributes: []
+  hardware_location: Lehmann-Zentrum(LZR) TUD Dresden
+  misc: ['One Hub with support for different Slurm controllers (versions)']
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  default_cpu: ['1', '2', '4']
+  max_cpu: 32
+  default_cpu_time: 1h
+  max_cpu_time: 24 h
+  default_memory: 8 GB
+  max_memory: 64 GB
+  total_memory: 64 GB
+  default_gpu: 1
+  max_gpu: 8
+  total_gpu: 8
+  default_disk: 50 GB
+  max_disk: 50 GB
+  default_persistent_disk: 50 GB
+  max_persistent_disk: 50 GB
+usage:
+  average_daily_sessions: 25
