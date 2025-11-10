@@ -1,7 +1,7 @@
 # Welcome to [Jupyter4NFDI](https://hub.nfdi-jupyter.de)
 
 
-[Jupyter4NFDI](https://hub.nfdi-jupyter.de) is an interactive, browser-based platform designed to provide seamless access to multiple **cloud resources**. Whether you are working on large-scale simulations, machine learning models, or data analytics, Jupyter4NFDI gives you the flexibility to perform these tasks interactively through familiar Jupyter Notebooks. While in the current phase only a one system is available, we will increase the number of resource providers in the future.
+[Jupyter4NFDI](https://hub.nfdi-jupyter.de) is an interactive, browser-based platform designed to provide seamless access to multiple **cloud resources**. Whether you are working on large-scale simulations, machine learning models, or data analytics, Jupyter4NFDI gives you the flexibility to perform these tasks interactively through familiar Jupyter Notebooks. 
 
 > If you feel a feature is missing in Jupyter4NFDI, don't hesitate to reach out to us at `jupyter4nfdi at lists.nfdi.de`. We welcome your feedback to help expand the possibilities within Jupyter4NFDI.
 

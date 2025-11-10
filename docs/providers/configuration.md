@@ -215,7 +215,7 @@ flavors:
         mem_limit: "2048M"
 ```
 
-> The flavors `default` and `minimal` are always active. Set them to `{}` to deactivate them. Or add a hub specific configuration (see below) and don't include `default` and `minimal` in the supported flavors for this hub.
+> The flavors `default` and `minimal` are always active. Set them to `null` to deactivate them. Or add a hub specific configuration (see below) and don't include `default` and `minimal` in the supported flavors for this hub.
 
 > Resources must be used by your Spawner Configuration. 
 
