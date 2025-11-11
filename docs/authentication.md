@@ -5,7 +5,7 @@ Jupyter4NFDI relies on the **Helmholtz ID** system for user authentication.
 This federated login provides a wide selection of identity providers (IdPs), allowing users to log in with institutional credentials or social IdPs, like GitHub, Google or ORCID.
 > A complete list of connected organizations is available [here](https://hifis.net/doc/helmholtz-aai/list-of-connected-organisations/#edugain).
 
-> Once [IAM4NFDI](https://base4nfdi.de/projects/iam4nfdi) is implemented, Jupyter4NFDI will switch to this as AAI solution.
+> Once the **NFDI infrastructure proxy** implemented in [IAM4NFDI](https://base4nfdi.de/projects/iam4nfdi) is connected to all planned AAIs (see https://doc.nfdi-aai.de/infraproxy/), Jupyter4NFDI will switch to this AAI solution.
 
 ## 1. Visit the Jupyter4NFDI Login Page
 Go to [hub.nfdi-jupyter.de](https://hub.nfdi-jupyter.de) and click the **Sign In** button.
