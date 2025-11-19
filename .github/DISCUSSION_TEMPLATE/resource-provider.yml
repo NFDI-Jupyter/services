@@ -1,0 +1,96 @@
+title: Resource Provider Incubator
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Resource Provider Incubator
+  - type: checkboxes
+    id: scopeForProcess
+    attributes:
+      label: I need ...
+      options:
+        - label: A general introduction into the architecture of Jupyter4NFDI’s connection to external resources
+        - label: Help to setup my infrastructure (e.g. setting up a Kubernetes Cluster)
+        - label: Help to install a JupyterHub Outpost in my infrastructure
+        - label: Help to configure which kind of users  (public, authenticated via DFN/edugain, people using my institutes IdP) are allowed to use my service
+        - label: Help to configure flavors in my infrastructure
+        - label: Help to setup a decent persistent storage infrastructure for users
+
+  - type: checkboxes
+    id: infrastructure
+    attributes:
+      label: Preferred underlying infrastructure
+      options:
+        - label: Kubernetes
+        - label: Docker
+        - label: Docker Swarm
+        - label: Virtual Machine / Bare Metal
+        - label: "Other: (please add here)"
+
+  - type: textarea
+    id: participants-proposer
+    attributes:
+      label: Proposer
+      description: Submitter of the proposal
+      placeholder: |
+        | Name | Mail | Organization |
+
+  - type: textarea
+    id: participants-project-team
+    attributes:
+      label: Project team
+      description: Persons who will participate in implementing the incubator project
+      placeholder: |
+        | Name | Role | Organization |
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Title
+        Integrate resources from XYZ into Jupyter4NFDI as a resource provider.
+
+  - type: input
+    id: title
+    attributes:
+      label: Update title if it does not fit
+
+  - type: textarea
+    id: abstract
+    attributes:
+      label: Abstract
+      description: Please describe in max. 150 words what your idea and goal of this incubator project
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Proposal Details
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please describe the amount and kind of resources you want to bring into the Jupyter4NFDI ecosystem. Also add a description which users should be allowed your resources in which way.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: Please describe the goals of the incubator proposal, including what needs to be delivered, participants, the communities that require a solution. Also state what special needs you might have, e.g. integrating a specific data storage into the Jupyter4NFDI ecosystem.
+
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of Done
+      description: Please describe the set of criteria that you think must be given, before we can integrate your resources into the Jupyter4NFDI production ecosystem.
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks
+      description: Are there risks that influence either the implementation of the activity or its outcomes?
+
+  - type: textarea
+    id: sustainability
+    attributes:
+      label: Sustainability
+      description: How are the results of the incubator proposal intended to be used? If this requires further engagement, can you describe how you intend to sustain it?

@@ -1,0 +1,83 @@
+title: User Incubator
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # User Incubator
+  - type: checkboxes
+    id: scopeForProcess
+    attributes:
+      label: I would like to ...
+      options:
+        - label: provide training materials to introduce Jupyter to my community
+        - label: get an overview over existing notebooks/workflows in my area
+        - label: give people from my community access to Jupyter4NFDI
+        - label: remove entry barriers to use Jupyter4NFDI
+        - label: assess and visualize the reproducibility of notebooks/workflows
+        - label: integrate Jupyter4NFDI into my workflows
+        - label: integrate Jupyter4NFDI into my service infrastructure
+
+  - type: checkboxes
+    id: user-group
+    attributes:
+      label: User group
+      options:
+        - label: NFDI Consortium
+        - label: Research community
+        - label: (Data) Repository provider
+        - label: Lab technician
+        - label: "Other: (please add here)"
+
+  - type: input
+    id: question-size
+    attributes:
+      label: Size of target community
+
+  - type: input
+    id: question-user-number
+    attributes:
+      label: Expected number of users
+  
+  - type: textarea
+    id: participants-proposer
+    attributes:
+      label: Proposer
+      description: Submitter of the proposal
+      placeholder: |
+        | Name | Mail | Organization |
+
+  - type: textarea
+    id: participants-project-team
+    attributes:
+      label: Project team
+      description: Persons who will participate in implementing the incubator project
+      placeholder: |
+        | Name | Role | Organization |
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Proposal Details
+
+  - type: input
+    id: title
+    attributes:
+      label: Formulate a title for your incubator project
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goals
+      description: Please describe the goals of the incubator project, including participants and the communities that require a solution. Also state what special needs you might have, e.g. integrating a specific data storage into the Jupyer4NFDI ecosystem.
+      
+  - type: textarea
+    id: propImpl
+    attributes:
+      label: Proposed Implementation
+      description: Provide a short description of the steps that are necessary to achieve the goals of the incubator project.
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: Please describe the desired deliverables of the incubator project.
