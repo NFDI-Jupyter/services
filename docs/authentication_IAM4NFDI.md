@@ -17,17 +17,14 @@ For more information on the **NFDI infrastructure proxy** implemented in [IAM4NF
 
 ## Example: Log in via Helmholtz AAI
 
-This federated login provides a wide selection of identity providers (IdPs), allowing users to log in with institutional credentials or social IdPs, like GitHub, Google or ORCID.
+The Helmholtz AAI is a federated login that provides a wide selection of identity providers (IdPs), allowing users to log in with institutional credentials or social IdPs, like GitHub, Google or ORCID.
 > A complete list of connected organizations is available [here](https://hifis.net/doc/helmholtz-aai/list-of-connected-organisations/#edugain).
-
-### 1. Visit the Jupyter4NFDI Login Page
-Go to [hub.nfdi-jupyter.de](https://hub.nfdi-jupyter.de) and click the **Sign In** button.
 
 > The web pages displayed during your initial registration may differ from the screenshots in this documentation. The registration process is handled by Helmholtz ID or the connected identity providers, so updates may change the appearance of these pages.
 
-<div style="text-align: center;">
-  <img src="../images/nfdi_login_01.png" alt="Click Login" style="width: 70%;">
-</div>
+### 1. On the Jupyter4NFDI Login Page, select Helmholtz AAI 
+
+Go to [hub.nfdi-jupyter.de](https://hub.nfdi-jupyter.de) and click the **Sign In** button. In the NFDI Infra Proxy dialogue, select **Helmholtz AAI**, as shown in the previous screenshot.
 
 ### 2. Sign via Home IdP or Social IdP
 
