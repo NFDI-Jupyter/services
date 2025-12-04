@@ -101,6 +101,7 @@ nav:
     - JupyterLab XL: users/jupyterlab/4.3/index.md
     - Custom Docker Images: users/jupyterlab/customdockerimage/index.md
     - Repo2Docker ( Binder ): users/jupyterlab/repo2docker/index.md
+    - Credits: users/credits.md
     - Mount external storage locations: users/storage.md
     - Real-Time-Collaboration (RTC): users/rtc.md
     - Share Links (FAIR): users/share.md
