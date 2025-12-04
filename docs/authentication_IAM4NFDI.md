@@ -12,8 +12,6 @@ The choice will depend on which AAI(s) the user's institution or community is co
 
 If not sure which AAI to choose, ask your institution/community about their AAI affiliation, or use Helmholtz AAI, as many institutions are connected to it and it also offers log in via GitHub, Google, ORCID.
 
-For more information on the **NFDI infrastructure proxy** implemented in [IAM4NFDI](https://base4nfdi.de/projects/iam4nfdi), is connected to all expected AAIs (see https://doc.nfdi-aai.de/infraproxy/), Jupyter4NFDI will switch to this AAI solution.
-
 
 ## Example: Log in via Helmholtz AAI
 
