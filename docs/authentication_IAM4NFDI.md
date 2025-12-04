@@ -69,10 +69,11 @@ You need to confirm that you agree to allow the Helmholtz ID service to use the 
 </div>
 
 
-### FAQ
+## FAQ
 
-### Why can't I change the account in Helmholtz ID
-When you click on Logout in Jupyter4NFDI, you will be logged out from Jupyter4NFDI, but you will remain logged into the Helmholtz ID service. To log out from Helmholtz ID, please visit the Helmholtz ID [website](https://login.helmholtz.de/home) and click on Logout. Afterward, you will have the option to choose a different provider during the login process.
+### After logging in, why can't I switch to another login option or another AAI on the NFDI Infra Proxy?
+
+To log out from the NFDI INfra Proxy, go to [https://infraproxy.nfdi-aai.dfn.de/idp/profile/oidc/end-session](https://infraproxy.nfdi-aai.dfn.de/idp/profile/oidc/end-session).
 
 ### How do I get access to a system
 More information about access to the systems is documented [here](features.md#1-systems-available).
