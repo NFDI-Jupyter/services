@@ -93,7 +93,7 @@ footer:
 nav:
   - General:
     - Overview: index.md
-    - Authentication: authentication.md
+    - Authentication: authentication_IAM4NFDI.md
     - 2-Factor authentication: 2fa.md
     - Available Resources and Tools: features.md
   - For Users:
