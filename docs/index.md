@@ -5,8 +5,8 @@
   border-radius: 4px;
   text-align: center;
 ">
-### Call for incubators has started.
-Please have a look at [github discussions]([https://github.com](https://github.com/NFDI-Jupyter/services/discussions/35))!
+<h3> Call for incubators has started </h3>
+Please have a look at <a href=https://github.com/NFDI-Jupyter/services/discussions/35>github discussions</a>!
 </div>
 
 # Welcome to [Jupyter4NFDI](https://hub.nfdi-jupyter.de)
