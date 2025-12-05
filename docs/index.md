@@ -1,8 +1,6 @@
 <div style="
-  padding: 8px;
   background: LightBlue;
   border: 1px solid #f0ad4e;
-  border-radius: 4px;
   text-align: center;
 ">
 <h3> Call for incubators has started </h3>
