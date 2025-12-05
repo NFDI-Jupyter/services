@@ -6,7 +6,7 @@
   text-align: center;
 ">
 ### Call for incubators has started.
-Please have a look at [github discussions](https://github.com)!
+Please have a look at [github discussions]([https://github.com](https://github.com/NFDI-Jupyter/services/discussions/35))!
 </div>
 
 # Welcome to [Jupyter4NFDI](https://hub.nfdi-jupyter.de)
