@@ -1,3 +1,14 @@
+<div style="
+  padding: 8px;
+  background: LightBlue;
+  border: 1px solid #f0ad4e;
+  border-radius: 4px;
+  text-align: center;
+">
+### Call for incubators has started.
+Please have a look at [github discussions](https://github.com)!
+</div>
+
 # Welcome to [Jupyter4NFDI](https://hub.nfdi-jupyter.de)
 
 
