@@ -1,9 +1,9 @@
-title: User Incubator
+title: Incubator for Use-Case and Content Integration
 body:
   - type: markdown
     attributes:
       value: |
-        # User Incubator
+        # Incubator for Use-Case and Content Integration
   - type: checkboxes
     id: scopeForProcess
     attributes:
