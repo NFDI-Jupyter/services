@@ -106,7 +106,7 @@ nav:
     - Real-Time-Collaboration (RTC): users/rtc.md
     - Share Links (FAIR): users/share.md
   - For Workshops:
-    - Overview: workshops.md
+    - Manage Workshops: workshops.md
   - For Resource Providers:
     - Overview: providers/index.md
     - Architecture: providers/architecture.md
