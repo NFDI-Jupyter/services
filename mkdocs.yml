@@ -117,6 +117,7 @@ nav:
     - Statistics about the Jupyter services collected: hubs/stats.md
     - Join the list: hubs/template.md
   - Support: support.md
+  - Event: love_data_week2026.md
 
 
 plugins:
