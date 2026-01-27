@@ -1,5 +1,7 @@
 # Repo2Docker ( Binder )
 
+> Jupyter4NFDI has updated the base image to Ubuntu 24.04! See the [upgrade guide](https://repo2docker.readthedocs.io/en/latest/howto/breaking_changes/#upgrade-of-base-image-from-ubuntu-22-04-to-24-04){:target="_blank"} for details.
+
 Jupyter4NFDI offers **Repo2Docker ( Binder )**, which facilitates building Docker images directly from GitHub, GitLab, Zenodo or other sources. This capability allows users to easily set up environments that replicate their local development setups or share projects with others. Combined with the **[Direct Links](#direct-links)** or the **[share](../../misc.md#share-button)** Button, it allows you easily to create FAIR digital objects.
 
 ## Direct Links
