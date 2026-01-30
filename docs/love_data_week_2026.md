@@ -15,8 +15,9 @@ This workshop is designed for **researchers**, **data stewards**, and **anyone i
 
 ## Webinar access (via webex)
 Please use the link to login into the webinar of the workshop.
+
 **Join as participant:**
-https://unistuttgart.webex.com/unistuttgart/j.php?MTID=m01ff38e44bd23b42197db2ae726d52f8 
+[Webex Webinar](https://unistuttgart.webex.com/unistuttgart/j.php?MTID=m01ff38e44bd23b42197db2ae726d52f8) 
 
 Webinar-Number:
 2781 945 6386
@@ -45,4 +46,5 @@ This section provides a short overview of the workshop agenda. We start with a b
 * Everybody is invited to test
 * Guided notebook (.ipynb) with explanations
 * Try your own project
+
 
