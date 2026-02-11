@@ -13,7 +13,7 @@ The easiest way to run the automated notebook validation is GitHub Actions.
   
   
 <div style="text-align: center;">
-  <img src="../../images/ghactions/a.png" alt="Prepare GitHub Action" style="width: 70%;">
+  <img src="../../../images/ghactions/a.png" alt="Prepare GitHub Action" style="width: 70%;">
 </div>  
   
    
@@ -41,7 +41,7 @@ jobs:
 ```
 
 <div style="text-align: center;">
-  <img src="../../images/ghactions/b.png" alt="Create Action" style="width: 70%;">  
+  <img src="../../../images/ghactions/b.png" alt="Create Action" style="width: 70%;">  
 </div>    
    
 4. **Customize** - Update **schedule** in your workflow if required. Make sure the **environment** name is the one from step 2. If only specific folders should be check set **notebook_dirs** accordingly.
@@ -51,7 +51,7 @@ jobs:
 1. **Run Workflow** - Browse to your GitHub Repository. Click on **Actions**, **Runs on Jupyter4NFDI**, **Run workflow** and **Run workflow** again. After a few seconds you will see a running workflow.
 
 <div style="text-align: center;">
-  <img src="../../images/ghactions/c.png" alt="Running workflow" style="width: 70%;">  
+  <img src="../../../images/ghactions/c.png" alt="Running workflow" style="width: 70%;">  
 </div>  
 
 2. **Check Logs** - Once the workflow is finished you can click on **Runs on Jupyter4NFDI**, **notebooks** and **Run notebooks via papaermill on Jupyter4NFDI**. Scroll down to find the logs from papermill executing your notebooks. Example Output:  
