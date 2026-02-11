@@ -8,8 +8,8 @@ The easiest way to run the automated notebook validation is GitHub Actions.
    
 ### Create GitHub Action
 
-1. **Get Jupyter4NFDI API Token** - Browse to https://hub.nfdi-jupyter.de/hub/token , log in and request a new API token. Give it a useful note like "_Repo_ GitHub Action". Copy that token.
-2. **Add Token to GitHub Environment** - Browse to your GitHub Repository. Click on **Settings**, **Environments** and **New environment**. Give it useful name like "jupyter4nfdi". Click on **Add environment secret**, enter `JUPYTERHUB_API_TOKEN` as Name and paste your token into value.
+1 - **Get Jupyter4NFDI API Token** - Browse to https://hub.nfdi-jupyter.de/hub/token , log in and request a new API token. Give it a useful note like "_Repo_ GitHub Action". Copy that token.
+2 - **Add Token to GitHub Environment** - Browse to your GitHub Repository. Click on **Settings**, **Environments** and **New environment**. Give it useful name like "jupyter4nfdi". Click on **Add environment secret**, enter `JUPYTERHUB_API_TOKEN` as Name and paste your token into value.
   
   
 <div style="text-align: center;">
@@ -17,7 +17,7 @@ The easiest way to run the automated notebook validation is GitHub Actions.
 </div>  
   
    
-3. **Add GitHub Action** - Browse to your GitHub Repository. Click on **Actions** and **set up your own workflow**. Afterwards copy the following text into it:
+3 - **Add GitHub Action** - Browse to your GitHub Repository. Click on **Actions** and **set up your own workflow**. Afterwards copy the following text into it:
 ```
 name: Runs on Jupyter4NFDI
 
@@ -41,20 +41,21 @@ jobs:
 ```
 
 <div style="text-align: center;">
-  <img src="../../../images/ghactions/b.png" alt="Create Action" style="width: 70%;">  
+    <img src="../../../images/ghactions/b.png" alt="Create Action" style="width: 70%;">  
 </div>    
    
-4. **Customize** - Update **schedule** in your workflow if required. Make sure the **environment** name is the one from step 2. If only specific folders should be check set **notebook_dirs** accordingly.
-5. **Commit** - Click on **commit changes**. 
+4 - **Customize** - Update **schedule** in your workflow if required. Make sure the **environment** name is the one from step 2. If only specific folders should be check set **notebook_dirs** accordingly.
+5 - **Commit** - Click on **commit changes**. 
 
 ### Use GitHub Action
-1. **Run Workflow** - Browse to your GitHub Repository. Click on **Actions**, **Runs on Jupyter4NFDI**, **Run workflow** and **Run workflow** again. After a few seconds you will see a running workflow.
+1 - **Run Workflow** - Browse to your GitHub Repository. Click on **Actions**, **Runs on Jupyter4NFDI**, **Run workflow** and **Run workflow** again. After a few seconds you will see a running workflow.
+
 
 <div style="text-align: center;">
-  <img src="../../../images/ghactions/c.png" alt="Running workflow" style="width: 70%;">  
-</div>  
+    <img src="../../../images/ghactions/c.png" alt="Running workflow" style="width: 70%;">  
+</div>
 
-2. **Check Logs** - Once the workflow is finished you can click on **Runs on Jupyter4NFDI**, **notebooks** and **Run notebooks via papaermill on Jupyter4NFDI**. Scroll down to find the logs from papermill executing your notebooks. Example Output:  
+2 - **Check Logs** - Once the workflow is finished you can click on **Runs on Jupyter4NFDI**, **notebooks** and **Run notebooks via papaermill on Jupyter4NFDI**. Scroll down to find the logs from papermill executing your notebooks. Example Output:  
   
 ```
 Job URL: https://hub.nfdi-jupyter.de/hub/api/job/username/gf987pbdv0loadr48lep63etyr5r2csv
