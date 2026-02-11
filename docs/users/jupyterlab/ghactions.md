@@ -8,7 +8,7 @@ The easiest way to run the automated notebook validation is GitHub Actions.
    
 ### Create GitHub Action
 
-1. **Get Jupyter4NFDI API Token** - Browse to https://hub.nfdi-jupyter.de/hub/token , log in and request a new API token. Give it a useful note like "_\<Repo>_ GitHub Action". Copy that token.
+1. **Get Jupyter4NFDI API Token** - Browse to https://hub.nfdi-jupyter.de/hub/token , log in and request a new API token. Give it a useful note like "_Repo_ GitHub Action". Copy that token.
 2. **Add Token to GitHub Environment** - Browse to your GitHub Repository. Click on **Settings**, **Environments** and **New environment**. Give it useful name like "jupyter4nfdi". Click on **Add environment secret**, enter `JUPYTERHUB_API_TOKEN` as Name and paste your token into value.
   
   
