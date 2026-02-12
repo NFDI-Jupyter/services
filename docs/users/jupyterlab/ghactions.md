@@ -79,5 +79,19 @@ Job status: stopped
 Papermill job completed successfully
 ```
 
-### Support
+### Add Jupyter4NFDI Badge
+Repositories that are compatible with Jupyter4NFDI can display a badge in their `README.md`.  
+When users click the badge, the repository is opened in a ready-to-use Jupyter4NFDI environment via Repo2Docker.  
+
+Update `_repoowner_`, `_repotype_` and `main.yml` to fit your repository.
+```
+[![Runs on Jupyter4NFDI](https://github.com/_repoowner_/_repotype_/actions/workflows/main.yml/badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/HEAD)
+```  
+Example:  
+<div style="text-align: center;">
+    <img src="https://github.com/NFDI-Jupyter/ghactions/actions/workflows/notebooks.yaml/badge.svg" alt="Runs on Jupyter4NFDI" >  
+</div>
+  
+
+## Support
 Feel free to [contact us](../../support.md) if you're having trouble setting up your GitHub Action.
