@@ -18,7 +18,7 @@ The easiest way to run the automated notebook validation is GitHub Actions.
 </div>  
   
    
-3 - **Add GitHub Action** - Browse to your GitHub Repository. Click on **Actions** and **set up your own workflow**. Afterwards copy the following text into it:
+3 - **Add GitHub Action** - Browse to your GitHub Repository. Click on **Actions** and **set up a workflow yourself**. Afterwards copy the following text into it:
 ```
 name: Runs on Jupyter4NFDI
 
