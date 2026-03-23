@@ -7,7 +7,7 @@ health_api_url:
 documentation_url: https://docs.jupyter.jsc.fz-juelich.de
 target_group_open_for: HPC users of JSC. Helmholtz users in general
 restricted: true
-login_process: Login via JSC account or Helmholtz AAI
+login_process: Login via JSC account or Helmholtz ID
 features:
   version: JupyterHub 4.1.5; JupyterLab 3.6, 4.2, users may start their own docker images
   programming_languages: ["Bash", "Cling", "JavaScript", "Julia", "Octave", "R", "Ruby"]

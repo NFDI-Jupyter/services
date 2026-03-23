@@ -16,7 +16,7 @@ target_group_open_for: Users within NFDI
 # Whether any researcher in Germany can use the service (true / false)
 restricted: true
 # How is the login performed; Login-URL
-login_process: Login via Helmholtz AAI. IAM4NFDI integration in the future.
+login_process: Login via Helmholtz ID. IAM4NFDI integration in the future.
 features: # What the service offers.
   # version of JupyterHub; classic notebook or lab view?
   version: 4.1.5; JupyterLab 4.2, users may start their own docker images
