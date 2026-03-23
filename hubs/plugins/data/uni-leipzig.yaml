@@ -1,0 +1,36 @@
+title: Webbasiertes Data Science und Machine Learning mit Jupyter
+provider: University of Leipzig
+service_url: https://lab.sc.uni-leipzig.de
+service_url_requirement: VPN or on-site at Leipzig University
+support: sc-request@uni-leipzig.de
+health_api_url: 
+documentation_url: https://www.sc.uni-leipzig.de, https://www.urz.uni-leipzig.de/unsere-services/servicedetail/service/webbasiertes-data-science-und-machine-learning-mit-jupyter
+target_group_open_for: Students and employees of University of Leipzig
+restricted: true
+login_process: Login via SC account
+features:
+  version: JupyterHub 3.1.0; JupyterLab 3.5.3
+  programming_languages: ["Python 3.11", "SageMath 10.0", "R 4.2.2", "Julia 1.8.5"]
+  environments: ["Python 3.9 OpenCV 4.7", "Python 3.9 PyTorch 1.10", "Python 3.9 TensorFlow 2.6.2"]
+  environments_info: ""
+  extensions: ["server-proxy", "jupyterlab-manager", "webio-jupyterlab-provider", "jupyterlab_pygments", "jupyterlab_lmod"]
+  proxy_apps: []
+  install: true
+  shared_folder: true
+  persistent_storage: false
+  misc: []
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  default_cpu: 1
+  max_cpu: 8
+  default_cpu_time: 4h
+  max_cpu_time: 4h
+  default_memory: 8GB
+  max_memory: 32GB
+  default_gpu: 0
+  max_gpu: 1
+  default_disk:
+  max_disk:
+  default_persistent_disk:
+  max_persistent_disk:
