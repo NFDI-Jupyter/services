@@ -45,7 +45,7 @@ jobs:
     <img src="../../../images/ghactions/b.png" alt="Create Action" style="width: 70%;">  
 </div>    
    
-4 - **Customize** - Update **schedule** in your workflow if required. Make sure the **environment** name is the one from step 2. If only specific folders should be check set **notebook_dirs** accordingly.  
+4 - **Customize** - Update **schedule** in your workflow if required. Make sure the **environment** name is the one from step 2. If only specific folders should be checked, set **notebook_dirs** accordingly.  
   
 5 - **Commit** - Click on **commit changes**. 
 
