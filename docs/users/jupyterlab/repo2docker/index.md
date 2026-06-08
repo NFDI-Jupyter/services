@@ -112,8 +112,16 @@ These features will empower users to work more efficiently and tackle complex da
 
 ### Repository Type
 
-- **Description:** Select the type of repository where your project is hosted. Currently only GitHub is supported. Other options will be added in the future:
-  - **GitHub:** The most common choice for code repositories.
+- **Description:** Select the type of repository where your project is hosted.
+  - **GitHub:** A repository hosted on GitHub (`github.com`).
+  - **GitHub Gist:** A GitHub Gist containing code, notebooks, or other files.
+  - **Git repository:** Any Git-compatible repository, including **self-hosted** Git services.
+  - **GitLab:** A repository hosted on GitLab (`gitlab.com`).
+  - **Zenodo DOI:** A research artifact published on Zenodo and identified by a DOI.
+  - **FigShare DOI:** A dataset or research output published on Figshare and identified by a DOI.
+  - **Hydroshare Resource:** A data resource hosted on HydroShare.
+  - **Dataverse DOI:** A dataset published in a Dataverse repository and identified by a DOI.
+  - **CKAN Dataset:** A dataset published through a CKAN-based data portal.
 - **Purpose:** This determines how Repo2Docker connects to and retrieves your repository content.
 
 ### URL
