@@ -107,6 +107,7 @@ nav:
     - Real-Time-Collaboration (RTC): users/rtc.md
     - Share Links (FAIR): users/share.md
     - REST API Access: users/rest-api.md
+    - GPU Access: users/gpu-access.md
   - For Workshops:
     - Manage Workshops: workshops.md
   - For Resource Providers:
