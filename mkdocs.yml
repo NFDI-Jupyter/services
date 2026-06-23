@@ -106,6 +106,7 @@ nav:
     - Mount external storage locations: users/storage.md
     - Real-Time-Collaboration (RTC): users/rtc.md
     - Share Links (FAIR): users/share.md
+    - REST API Access: users/rest-api.md
   - For Workshops:
     - Manage Workshops: workshops.md
   - For Resource Providers:
