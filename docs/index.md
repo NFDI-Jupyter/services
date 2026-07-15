@@ -3,7 +3,7 @@
   border: 1px solid #f0ad4e;
   text-align: center;
 ">
-<h3> Call for incubators has started </h3>
+<h3> Second call for incubators has started </h3>
 Please have a look at <a href=https://github.com/NFDI-Jupyter/services/discussions/47>github discussions</a>!
 </div>
 
