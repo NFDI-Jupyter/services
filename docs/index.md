@@ -4,7 +4,7 @@
   text-align: center;
 ">
 <h3> Call for incubators has started </h3>
-Please have a look at <a href=https://github.com/NFDI-Jupyter/services/discussions/35>github discussions</a>!
+Please have a look at <a href=https://github.com/NFDI-Jupyter/services/discussions/47>github discussions</a>!
 </div>
 
 # Welcome to [Jupyter4NFDI](https://hub.nfdi-jupyter.de)
