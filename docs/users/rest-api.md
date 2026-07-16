@@ -71,7 +71,7 @@ Or if stopped:
 Send a DELETE request to `/hub/api/users/{username}/servers/{servername}`:
 
 ```bash
-curl -X DELETE -H "Authorization: token YOUR_TOKEN" https://hub.nfdi-jupyter.de/hub/api/users/USERNAME/SERVERNAME  
+curl -X DELETE -H "Authorization: token YOUR_TOKEN" https://hub.nfdi-jupyter.de/hub/api/users/USERNAME/servers/SERVERNAME  
 ```
 
 ### Stop and delete Server
@@ -79,9 +79,9 @@ curl -X DELETE -H "Authorization: token YOUR_TOKEN" https://hub.nfdi-jupyter.de/
 You may only have 15 Jupyter Server configurations. To delete a Server run the following command:
   
 ```bash
-curl -X DELETE -H "Authorization: token YOUR_TOKEN" -d '{"remove": true}' https://hub.nfdi-jupyter.de/hub/api/users/USERNAME/SERVERNAME
+curl -X DELETE -H "Authorization: token YOUR_TOKEN" -d '{"remove": true}' https://hub.nfdi-jupyter.de/hub/api/users/USERNAME/servers/SERVERNAME
 ```
-  s
+  
 More details in the official JupyterHub REST API [documentation](https://jupyterhub.readthedocs.io/en/stable/reference/rest-api.html#operation/delete-user-server-name)
 
 ## User Options
