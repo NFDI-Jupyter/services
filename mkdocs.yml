@@ -98,7 +98,7 @@ nav:
     - Available Resources and Tools: features.md
   - For Users:
     - JupyterLab: users/jupyterlab/default/index.md
-    - JupyterLab XL: users/jupyterlab/4.3/index.md
+    - JupyterLab XL: users/jupyterlab/xl/index.md
     - Custom Docker Images: users/jupyterlab/customdockerimage/index.md
     - Repo2Docker ( Binder ): users/jupyterlab/repo2docker/index.md
     - Automated Notebook Validation: users/jupyterlab/ghactions.md
