@@ -1,0 +1,41 @@
+title: SCC Jupyterhub
+provider: GWDG
+service_url: https://jupyter-hpc.gwdg.de
+support: hpc-support@gwdg.de
+health_api_url: https://jupyter-hpc.gwdg.de/hub/api
+documentation_url: https://docs.gwdg.de/doku.php?id=en:services:application_services:jupyter:hpc
+target_group_open_for: Users with a full GWDG account (including people working in partner projects).
+restricted: true
+login_process: Login via LDAP
+features:
+  version: JupyterHub 1.0.0, Notebook Server 6.0.3
+  programming_languages: ["Python", "R", "Bash"]
+  environments: []
+  environments_info: ""
+  extensions: ["ipyparallel"]
+  proxy_apps: []
+  install: false
+  shared_folder: true
+  persistent_storage: true
+  misc:
+    [
+      "Own directory can be made writable for others.",
+      "Project directories are possible (POSIX group members can get access)."
+    ]
+technicals:
+  misc: ["Scratch file system (very fast), and Stornext (slower, for home file system)"]
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  default_cpu: 12
+  max_cpu: 24
+  default_cpu_time: 8h
+  max_cpu_time: 8h
+  default_memory: 64GB
+  max_memory: 128GB
+  default_gpu: 0
+  max_gpu: 1
+  default_disk: 20 GB
+  max_disk: 0.5 PB available for all users
+  default_persistent_disk:
+  max_persistent_disk: 0.5PB available for all users

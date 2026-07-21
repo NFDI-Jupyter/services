@@ -1,0 +1,37 @@
+[data-md-color-scheme="fzj"] {
+  --md-primary-fg-color:        #023d6b;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #272727;
+}
+:root {
+  --md-primary-fg-color: #023d6b;
+}
+
+/* Logo styling */
+.md-sidebar--primary .md-logo {
+ /* display: flex;
+  justify-content: center;
+  padding: 20px;*/
+  display: none
+}
+
+/* Optional: Customize logo size */
+.md-header__button.md-logo img {
+  max-width: 100%;
+  height: 4em;
+  margin: -.2em;
+}
+
+/* Hide the logo in the header */
+/*.md-header .md-logo {
+  display: none;
+}*/
+label.md-nav__link {
+  color: #023d6b !important;
+  font-size: 16px;
+}
+
+label.md-nav__title {
+  color: #023d6b !important;
+  font-size: 20px;
+}

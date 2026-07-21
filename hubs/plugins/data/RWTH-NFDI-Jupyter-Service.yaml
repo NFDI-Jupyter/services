@@ -1,0 +1,50 @@
+title: RWTH HPC JupyterHub
+provider: ITC RWTH Aachen University
+service_url: https://jupyterhub.hpc.itc.rwth-aachen.de:9651/
+service_url_requirement: Network address of RWTH, FH Aachen, Bochum, Bonn, Cern, Darmstadt, Duisburg/Essen, Erlangen, Hagen, Desy, Juelich, LRZ Muenchen, Muenster, Siegen, Wien, Wuppertal or Saarland University
+support: servicedesk@itc.rwth-aachen.de
+health_api_url: https://jupyterhub.hpc.itc.rwth-aachen.de:9651/hub/api/health
+documentation_url: https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/689934fec5a34c909c54606f6bc2e827/
+target_group_open_for: Researchers, RWTH Students/Employees/Guests, Juelich Members, Users sponsored by other Users, Users upon project application
+restricted: true
+login_process: Login with RWTH HPC Account through most NHR or NRW VPNs
+features:
+  version: JupyterHub 3.0+, JupyterLab 3.4.7+
+  programming_languages: ["Python 3.9", "Octave", "R", "C++ 11/14/17", "Matlab 2020b", "Matlab 2022b"]
+  environments: ["Python: Keras + Tensorflow", "Python: Tensorboard + Keras + Tensorflow", "Python: Pytorch",  "Pytorch: Tensorboard", "Python: Gurobi", "Matlab: Gurobi", "Custom"]
+  environments_info: "https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/50a810bf34da41c3a37bd315505af92a/"
+  extensions: ["ipytree",
+        "jupyterlab-drawio",
+        "jupyterlab-plotly",
+        "jupyterlab_iframe",
+        "nbdime-jupyterlab",
+        "jupyter-matplotlib",
+        "jupyterlab_pygments",
+        "jupyterlab/git",
+       " jupyterlab/latex",
+        "jupyter-widgets/jupyterlab-manager"]
+  proxy_apps: ["Matlab 2022b", "Matlab 2020b"]
+  install: false
+  shared_folder: true
+  persistent_storage: true
+  misc: ["Available computing time (core-hours) vary based on user affiliation or project. Project application is necessary.",
+         "Users installs planned, by request only at the moment."]
+technicals:
+  deployment: "Runs on HPC Hardware under Slurm."
+  misc: []
+resources:
+  default_server_user: 1
+  max_server_user: 5
+  # cpu values refer to vCPUs and are guarantees in case of contention, limits are 8x higher
+  default_cpu: 1
+  max_cpu: 48
+  default_cpu_time: 4h
+  max_cpu_time: 172 h
+  default_memory: 4 GB
+  max_memory: 185 GB
+  default_gpu: 0
+  max_gpu: 2
+  default_disk: 400 GB
+  max_disk: 1 TB  
+  default_persistent_disk: 400 GB
+  max_persistent_disk: 1 TB

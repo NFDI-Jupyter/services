@@ -1,0 +1,52 @@
+title: NFDI4Ing JupyterHub
+provider: University of Stuttgart
+service_url: https://jupyter.nfdi4ing.de
+support: fokus@izus.uni-stuttgart.de
+health_api_url: 
+documentation_url: 
+target_group_open_for: Researchers in Engineering
+restricted: true
+login_process: Login via Shibboleth (DFN-AAI)
+features:
+  version: JupyterHub 4.x, JupyterLab 4.x
+  programming_languages: ["Python", "Julia", "R"]
+  environments: []
+  environments_info: ""
+  extensions: []
+  proxy_apps: []
+  install: true
+  shared_folder: false
+  persistent_storage: true
+  misc: ["WebDAV connection possible"]
+technicals:
+  platform: Linux Virtual Machine
+  deployment: Docker compose with pre-defined Jupyter Server images
+  login_attributes: ["pairwise-id", "displayName", "mail"]
+  hardware_location: "Stuttgart, Germany"
+  misc: []
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  default_cpu: 1
+  max_cpu: 4
+  total_cpu: 28
+  burst_total_cpu: 28
+  default_cpu_time: 1 h
+  max_cpu_time: 72 h
+  default_memory: 250 MB
+  max_memory: 4 GB
+  total_memory: 500 GB
+  burst_total_memory: 500 TB
+  default_gpu: 0
+  max_gpu: 0
+  total_gpu: 0
+  burst_total_gpu: 0
+  default_disk: 10 GB
+  max_disk: 10 GB
+  default_persistent_disk: 2 GB
+  max_persistent_disk: 2 GB
+  total_disk: 2 TB
+  burst_total_disk: 2 TB
+usage:
+  # rough estimate based on logs, not yet monitored 
+  average_daily_sessions: 5 
