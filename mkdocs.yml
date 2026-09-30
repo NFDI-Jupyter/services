@@ -102,6 +102,7 @@ nav:
     - Custom Docker Images: users/jupyterlab/customdockerimage/index.md
     - Repo2Docker ( Binder ): users/jupyterlab/repo2docker/index.md
     - Automated Notebook Validation: users/jupyterlab/ghactions.md
+    - ReproScore: users/reproscore.md
     - Credits: users/credits.md
     - Mount external storage locations: users/storage.md
     - Real-Time-Collaboration (RTC): users/rtc.md
