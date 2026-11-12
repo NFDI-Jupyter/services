@@ -4,26 +4,28 @@ Jupyter4NFDI provides a variety of options and features to enhance your interact
 
 ## 1. Systems Available
 
+> The amount of credits you receive depends on the information we get from the AAI. Using GitHub / Google / Orcid may lead to a reduced amount of credits.
+
 ### Cloud
 
-**deNBI-Cloud** is accessible to everyone, providing flexible cloud resources. For users utilizing JSC-Cloud, we offer several resource configurations, including:
+**deNBI-Cloud** and **JSC-Cloud** are accessible to everyone, providing flexible cloud resources. On both systems, we offer the following resource configurations:
 
-- **2GB RAM, 1 CPU** for **2 hours** (mostly used for Repo2Docker shared sessions)
-- **2GB RAM, 1 CPU** for **5 days**
-- **4GB RAM, 1 CPU** for **2 days**
-- **8GB RAM, 2 CPUs** for **10 hours**
+- **2GB RAM, 1 CPU** for **10 credits per hour**
+- **4GB RAM, 1 CPU** for **20 credits per hour**
+- **8GB RAM, 4 CPUs** for **40 credits per hour**
+- **16GB RAM, 4 CPUs** for **80 credits per hour**
 
-**JSC-Cloud** is accessible to everyone, providing flexible cloud resources. For users utilizing JSC-Cloud, we offer several resource configurations, including:
-
-- **2GB RAM, 1 CPU** for **7 days**
-- **4GB RAM, 1 CPU** for **2 days**
-- **8GB RAM, 2 CPUs** for **10 hours**
+> **Need more power for your session?** Both **deNBI-Cloud** and **JSC-Cloud** can give you **GPU-enabled sessions** as well as **flavors with more memory** than the ones listed above. Since these resources are limited, they are **not enabled by default** — but getting them is just a short message away: simply [contact support](support.md), tell us why you need it, and we will unlock the corresponding flavors for your account. All the details, including the available GPU profiles and the request process, can be found on the [GPU Access](users/gpu-access.md) page.
 
 Please note that these flavors may change in the future and are dependent on the available resources.
 
 With **deNBI-Cloud** and **JSC-Cloud**, each user enjoys **25GB** of **persistent storage**, allowing you to keep your important work safe and accessible. This feature is available not only in the **default JupyterLab versions** but also when using **custom Docker images** or **Repo2Docker**. Whether you're developing in a standard environment or tailoring your setup with your own images, you can rest assured that your data is securely stored and easily retrievable.
 
-> We will add more systems to Jupyter4NFDI in the future. 
+**The GWDG Cloud** is a third system available through Jupyter4NFDI, operated by the [GWDG](https://www.gwdg.de).
+
+The GWDG Jupyter-Cloud provides a **default flavor** with **2 CPU and 8 GB of RAM**. Sessions can run for up to **24 hours**.
+
+> We will add more systems to Jupyter4NFDI in the future.
 
 ## 2. Different JupyterLab Versions
 
