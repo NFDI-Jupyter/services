@@ -1,0 +1,42 @@
+title: Interactive Tools of European Galaxy Server
+provider: University of Freiburg
+service_url: https://live.usegalaxy.eu
+support: contact@usegalaxy.eu  
+health_api_url: https://status.galaxyproject.org
+documentation_url: https://training.galaxyproject.org
+target_group_open_for: Open for everyone
+restricted: false
+login_process: Login via OpenIDC (LS-AAI, DataPLANT)
+features:
+  version: Galaxy 23.0 (Jupyterlab v3+)
+  programming_languages: ["Python", "Julia", "R", "Ansible", "Bash"]
+  environments: ["Jupyter ML", "MGnify", "Jupyter for Material Science", "Pangeo Jupyter", "Climate Jupyter"]
+  environments_info: ""
+  extensions: [bqplot, jupyter-matplotlib, jupyterlab-jupytext, jupyterlab-manager, fasta-extension, geojson-extension, katex-extension, jupyterlab_hdf, jupyterlab-execute-time, jupyterlab-kernelspy, jupyterlab-nvdashboard, jupyterlab-system-monitor, jupyterlab-topbar-extension, jupyterlab_pygments, nbdime-jupyterlab, collapsible_headings, code-snippet-extension, code-viewer-extension, metadata-extension, pipeline-editor-extension, python-editor-extension, r-editor-extension, scala-editor-extension, script-debugger-extension, theme-extension, jupyterlab-lsp, resource-usage, jupyter-server-proxy, git, jupyterlab-preview]
+  proxy_apps: [RStudio, AskOMICS, 
+    BAM-iobio, VCF-iobio, BlobToolKit, CellXGene, Ethercalc, Phinch, MetaShARK, MetaShrimp, ODV, Wallace,
+    iSEE, Wilson, Panoply netCDF Viewer, HiGlass, ParaView, QGIS, QuPath, Radiant, Scoop3-Agro, VRM Editor, 
+    Pavian, OpenRefine, Neo4J, GeoExplorer, NEAL]
+  install: true
+  shared_folder: true
+  persistent_storage: true
+  misc: ["Cloud storage can be accessed via Galaxy",
+  "Notebooks can be combined with classical HPC workflows",
+  "Part of the EOSC project EuroScienceGateway",
+  "[Community can contribute VREs](https://usegalaxy-eu.github.io/operations/interactive_tools.html)",
+  "Available resources and apps can vary based on user affiliation"]
+resources:
+  default_server_user: 1
+  max_server_user: 1
+  default_cpu: 1
+  max_cpu: 4
+  default_cpu_time: 24 h
+  max_cpu_time: 72 h
+  default_memory: 4 GB
+  max_memory: 256 GB
+  default_gpu: 1
+  max_gpu: 1
+  default_disk: 250 GB
+  max_disk: 2 TB
+  default_persistent_disk: 250 GB
+  max_persistent_disk: 250 GB
