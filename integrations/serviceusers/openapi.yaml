@@ -1,0 +1,241 @@
+openapi: 3.0.3
+info:
+  title: Jupyter4NFDI Serviceuser API
+  version: 1.0.0
+  description: |
+    The **Serviceuser API** lets an external *service* (a registered JupyterHub
+    service account) create and manage dedicated **users** and their
+    Jupyter servers on Jupyter4NFDI.
+
+servers:
+  - url: https://hub.nfdi-jupyter.de
+    description: Jupyter4NFDI.
+tags:
+  - name: serviceuser
+    description: Create, query and delete service-user servers.
+security:
+  - apiToken: []
+paths:
+  /api/serviceuser/{user_name}:
+    get:
+      tags: [serviceuser]
+      summary: Get the status of a users server
+      description: |
+        Returns the current state of the server of a user.
+
+        While the server is active, the response contains:
+
+        * `next_url` - URL of the live JupyterLab server.
+        * `logs_url` - Server-Sent-Events endpoint streaming spawn progress
+          and log lines for this server.
+      operationId: getServiceUserServerStatus
+      parameters:
+        - $ref: '#/components/parameters/UserName'
+      responses:
+        '200':
+          description: Server is running.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerStatus'
+        '202':
+          description: Server is pending (spawning or stopping).
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerStatus'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          description: The service user or the named server does not exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      tags: [serviceuser]
+      summary: Start (and if needed create) a user server
+      description: |
+        Creates the service user if it does not exist yet and starts the
+        user's server.
+      operationId: createServiceUserServer
+      parameters:
+        - $ref: '#/components/parameters/UserName'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateServerRequest'
+      responses:
+        '200':
+          description: Server is running.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerStatus'
+        '201':
+          description: Server was created and is being spawned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerStatus'
+        '202':
+          description: Request accepted; server is pending/stopped.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerStatus'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+    delete:
+      tags: [serviceuser]
+      summary: Stop a service-user server (and optionally delete the user)
+      description: |
+        Stops the user's server and revokes its API token. Optionally the
+        service user itself is deleted as well (`delete_user=true`).
+
+        The stop is performed asynchronously. Unless `wait=true` is set, the
+        endpoint answers immediately with `202` while the server is still
+        shutting down and `204` once it has been removed.
+      operationId: deleteServiceUserServer
+      parameters:
+        - $ref: '#/components/parameters/UserName'
+        - name: delete_user
+          in: query
+          description: Also delete the service user and all of its servers.
+          schema:
+            type: boolean
+            default: false
+        - name: wait
+          in: query
+          description: Block until the server has fully stopped before answering.
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '202':
+          description: The server is still in the process of stopping.
+          content:
+            text/plain:
+              schema:
+                type: string
+        '204':
+          description: The server was stopped (and, if requested, the user deleted).
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          description: The service user does not exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  securitySchemes:
+    apiToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: >-
+        JupyterHub Service API token. Enter it as `token <YOUR_JUPYTERHUB_SERVICE_API_TOKEN>`
+        (e.g. `token 8f1c2a...`) so the request is sent with the
+        `Authorization: token ...` header the hub expects. The token must
+        carry the `custom:serviceusers` scope.
+  parameters:
+    UserName:
+      name: user_name
+      in: path
+      required: true
+      description: >-
+        Name of the user as seen by the calling service (i.e. without
+        the `service:<service>:` prefix). The hub stores it internally as
+        `service:<service-name>:<user_name>`.
+      schema:
+        type: string
+        example: userX
+  responses:
+    BadRequest:
+      description: >-
+        The request could not be processed (e.g. the per-user named-server limit
+        is reached, the user must not be created, or the server is in a
+        transitional state).
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Forbidden:
+      description: >-
+        The caller is not authenticated, or its token does not carry the
+        `custom:serviceusers` scope.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    ServerStatus:
+      type: object
+      description: State of a service-user server.
+      properties:
+        status:
+          type: string
+          enum: [running, spawn_pending, stop_pending, stopped]
+          description: Current lifecycle state of the server.
+        next_url:
+          type: string
+          format: uri
+          description: >-
+            URL of the live JupyterLab server. A short-lived API token is
+            embedded as the `token` query parameter; use it to reach the server
+            programmatically or in a browser. Only present while the server is
+            active.
+        logs_url:
+          type: string
+          format: uri
+          description: >-
+            Server-Sent-Events endpoint that streams spawn progress and log
+            lines for this server. Only present while the server is active.
+        exit_code:
+          type: integer
+          nullable: true
+          description: >-
+            Exit code of the server process when available (e.g. after a crash
+            or a clean stop).
+        logs:
+          type: array
+          description: >-
+            Log lines / spawn events collected by the spawner (may contain HTML
+            fragments).
+          items:
+            type: string
+    Error:
+      type: object
+      description: Machine- and human-readable error.
+      properties:
+        reason:
+          type: string
+          description: Explanation of what went wrong.
+    CreateServerRequest:
+      type: object
+      description: Optional JSON body for `POST`.
+      properties:
+        create_user:
+          type: boolean
+          description: >-
+            Create the service user if it does not exist yet. Defaults to the
+            configured `create_user_default` (normally `true`). Set to `false`
+            to only start a server for an already existing user.
+          default: true
+        user_options:
+          type: object
+          description: >-
+            Free-form options forwarded to the spawner (e.g. profile, flavor,
+            system, image). They are merged with the `user_options` configured
+            for this service user.
+          additionalProperties: true
+          example:
+            profile: default
+            flavor: m1
