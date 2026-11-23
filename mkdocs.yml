@@ -1,7 +1,7 @@
 site_name: ""
 site_description: Jupyter4NFDI project overview
 site_author: WG RSE, NFDI Section Common Infrastructures, Jupyter4NFDI
-site_url: "https://NFDI-Jupyter.github.io/services"
+site_url: "https://nfdi-jupyter.de/docs/"
 repo_url: https://github.com/NFDI-Jupyter/services
 theme:
   name: material 
@@ -84,9 +84,9 @@ footer:
     - "Grant Number 521453681"
   links:
     - name: Contact
-      link: https://nfdi-jupyter.de/support/
+      link: https://nfdi-jupyter.de/docs/support/
     - name: Legal Notice
-      link: https://nfdi-jupyter.de/imprint/
+      link: https://nfdi-jupyter.de/docs/imprint/
     - name: Privacy Policy
       link: https://hub.nfdi-jupyter.de/hub/privacy
 

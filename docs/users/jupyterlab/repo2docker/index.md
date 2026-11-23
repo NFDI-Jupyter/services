@@ -19,10 +19,10 @@ In case you would like to add a badge to your Repository or Documentation:
 </div>
 ```
 Markdown:
-[![NFDI](https://nfdi-jupyter.de/images/nfdi_badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/_ref_)
+[![NFDI](https://nfdi-jupyter.de/docs/images/nfdi_badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/_ref_)
 
 RST:
-.. image:: https://nfdi-jupyter.de/images/nfdi_badge.svg
+.. image:: https://nfdi-jupyter.de/docs/images/nfdi_badge.svg
  :target: https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/_ref_
 ```  
   
@@ -31,11 +31,11 @@ RST:
 </div>
 ```
 Markdown:
-[![Jupyter4NFDI](https://nfdi-jupyter.de/images/jupyter4nfdi_badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/_ref_)
+[![Jupyter4NFDI](https://nfdi-jupyter.de/docs/images/jupyter4nfdi_badge.svg)](https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/_ref_)
 
 
 RST:
-.. image:: https://nfdi-jupyter.de/images/jupyter4nfdi_badge.svg
+.. image:: https://nfdi-jupyter.de/docs/images/jupyter4nfdi_badge.svg
  :target: https://hub.nfdi-jupyter.de/v2/gh/_repoowner_/_repotype_/_ref_
 ```
 
