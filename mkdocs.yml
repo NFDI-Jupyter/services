@@ -66,6 +66,7 @@ extra_css:
   - css/extra.css
 
 extra:
+  homepage: https://nfdi-jupyter.de
   logo: "images/logo.png"
   generator: false
   social:
